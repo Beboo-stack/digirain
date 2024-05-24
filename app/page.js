@@ -1,4 +1,5 @@
 import Booking from "@/components/Booking";
+import CarouselSec from "@/components/CarouselSec";
 import Counter from "@/components/Counter";
 import Hero from "@/components/Hero";
 import OurServices from "@/components/OurServices";
@@ -18,6 +19,7 @@ export default function Home() {
       <Partners2 />
       <Booking />
       <OurServices />
+      <CarouselSec />
     </div>
   );
 }

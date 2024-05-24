@@ -36,33 +36,6 @@ const OurServices = () => {
     {
       title: "Influencers Management",
     },
-    {
-      title: "All Services",
-    },
-    {
-      title: "All Services",
-    },
-    {
-      title: "All Services",
-    },
-    {
-      title: "All Services",
-    },
-    {
-      title: "All Services",
-    },
-    {
-      title: "All Services",
-    },
-    {
-      title: "All Services",
-    },
-    {
-      title: "All Services",
-    },
-    {
-      title: "All Services",
-    },
   ];
   return (
     <section className="py-14">
@@ -105,10 +78,16 @@ const OurServices = () => {
                   {item.title}
                 </h4>
                 <div className="h-1 w-full bg-gray-200"></div>
-                <ul className="">
+                <ul className="grid gap-1">
                   {links.map((item, idx) => (
-                    <li key={idx}> {item.title} </li>
+                    <li key={idx} className="underline">
+                      {" "}
+                      {item.title}{" "}
+                    </li>
                   ))}
+                  <p className="font-bold text-lg underline mt-8 cursor-pointer">
+                    Explore The Service
+                  </p>
                 </ul>
               </li>
             ))}
