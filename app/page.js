@@ -1,3 +1,4 @@
+import Blog from "@/components/Blog";
 import Booking from "@/components/Booking";
 import CarouselSec from "@/components/CarouselSec";
 import Counter from "@/components/Counter";
@@ -7,6 +8,7 @@ import Partners from "@/components/Partners";
 import Partners2 from "@/components/Partners2";
 import Proplems from "@/components/Proplems";
 import Team from "@/components/Team";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
       <Booking />
       <OurServices />
       <CarouselSec />
+      <Testimonials />
+      <Blog />
     </div>
   );
 }

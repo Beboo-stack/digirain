@@ -38,6 +38,19 @@ const CarouselSec = () => {
   );
   return (
     <div className="w-full h-full grid justify-center items-center mb-20">
+      <div className="">
+        <h2 className="text-center uppercase text-yellow font-bold text-base">
+          Case Studies
+        </h2>
+        <h2 className="text-5xl font-bold text-center my-3">
+          Read Some Of Our Successful Cases
+        </h2>
+      </div>
+      <p className="w-3/4 text-center mx-auto mb-16">
+        Get ready to be blown away by our team’s ability to turn businesses
+        around 360 degrees! We have a collection of web design, SEO, and social
+        media case studies that will leave you speechless.
+      </p>
       <Carousel
         plugins={[plugin.current]}
         opts={{
