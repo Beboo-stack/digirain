@@ -57,7 +57,9 @@ const Partners2 = () => {
         <p className="text-center capitalize font-bold text-base text-yellow max-w-xs md:max-w-full mx-auto">
           our partners
         </p>
-        <h2 className="text-5xl md:text-6xl text-center font-bold">Step Into Success With Industry Giants</h2>
+        <h2 className="text-5xl md:text-6xl text-center font-bold">
+          Step Into Success With Industry Giants
+        </h2>
         <p className="text-center max-w-[90%]">
           Our collaboration allows us to harness the latest innovations,
           insights, and cutting-edge tools to elevate your digital presence and

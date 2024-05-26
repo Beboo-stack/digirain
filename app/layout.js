@@ -14,9 +14,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <div className="w-full h-full relative">
+          <div className="absolute top-0 left-0 w-full">
+            <Navbar />
+          </div>
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

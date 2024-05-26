@@ -1,3 +1,6 @@
+"use client";
+import Image from "next/image";
+import { motion } from "framer-motion";
 import React from "react";
 
 const Footer = () => {
@@ -22,6 +25,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
       {/*
   Heads up! 👋
 
@@ -29,6 +33,40 @@ const Footer = () => {
 */}
 
       <footer className="bg-[#1A1A1A] text-white">
+        {/* <div
+          className="relative flex justify-between gap-10  w-full  overflow-hidden py-12  mx-auto max-w-[1300px]"
+          style={{ width: "100%" }}
+        >
+          <div className="absolute inset-0 z-20 before:absolute before:left-0 before:top-0  before:h-full before:bg-gradient-to-r before:from-white before:to-transparent before:filter before:blur-3 after:absolute after:right-0 after:top-0   after:h-full after:bg-gradient-to-l after:from-white after:to-transparent after:filter after:blur-3"></div>
+
+          <motion.div
+            className="flex w-full "
+            animate={{
+              x: ["10%", "-10%"],
+              transition: {
+                ease: "linear",
+                duration: 5,
+                repeat: Infinity,
+              },
+            }}
+          >
+            <ul className="flex max-w-full h-full w-full ">
+              <li className="h-full w-ful flex flex-row">
+                <p className="text-centerh-full font-bold text-xl">
+                  READY TO SPEAK WITH A MARKETING EXPERT?
+                  <span className="text-yellow"> GIVE US A RING.</span>
+                </p>
+                <p className="text-centerh-full font-bold text-xl">
+                  READY TO SPEAK WITH A MARKETING EXPERT?
+                  <span className="text-yellow"> GIVE US A RING.</span>
+                </p>
+              </li>
+            </ul>
+          </motion.div>
+            <p className="py-2 text-center px-10 bg-yellow text-black rounded-lg z-40">
+              book a free call
+            </p>
+        </div> */}
         <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>

@@ -4,7 +4,7 @@ import React from "react";
 const Navbar = () => {
   const links = [
     {
-      path: "/whoWeAre",
+      path: "/who-we-are",
       name: "Who We Are",
     },
     {
@@ -22,7 +22,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full h-full py-7 px-6  md:px-10 xl:px-36 flex justify-between items-center">
+    <div className="w-full h-full py-7 px-6  md:px-10 xl:px-36 flex justify-between items-center bg-">
       {/* Logo */}
       <div className="">
         <Link href="/">
