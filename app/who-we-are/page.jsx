@@ -1,5 +1,6 @@
 import CoreValues from "@/components/CoreValues";
 import Insights from "@/components/Insights";
+import Results from "@/components/Results";
 import Image from "next/image";
 import React from "react";
 
@@ -33,6 +34,7 @@ const page = () => {
       </div>
       <Insights />
       <CoreValues />
+      <Results />
     </section>
   );
 };
