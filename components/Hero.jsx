@@ -6,7 +6,7 @@ const Hero = () => {
       <h2 className="text-6xl  text-center font-bold leading-normal">
         Increase Your <span className="text-[#ffce26]">Feluence</span>
       </h2>
-      <div className="w-full h-full mt-5 flex justify-center items-center">
+      <div className="w-full h-full mt-1 flex justify-center items-center">
         <h2 className="text-6xl font-bold text-center">
           And Grow Your Business
         </h2>
