@@ -1,4 +1,5 @@
 "use client";
+import { ArrowDown, Plus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -6,22 +7,39 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
+  const [subToggle, setSubToggle] = useState(false);
+
   const links = [
     {
       path: "/who-we-are",
       name: "Who We Are",
     },
     {
-      path: "/ourServices",
+      path: "",
       name: "Our Services",
     },
     {
-      path: "/caseStudies",
+      path: "/case-studies",
       name: "Case Studies",
     },
     {
       path: "/insights",
       name: "Insights",
+    },
+  ];
+
+  const subLinks = [
+    {
+      title: "Search Engine Optimization",
+      path: "/seo-web-services",
+    },
+    {
+      title: "Digital Communication Services",
+      path: "/digital-communication-services",
+    },
+    {
+      title: "Performance Marketing",
+      path: "/performance-marketing",
     },
   ];
 
@@ -78,20 +96,63 @@ const Navbar = () => {
       {/* Menu */}
       <div className="hidden w-full h-full items-center md:flex justify-end">
         <ul className="flex gap-10 items-center">
-          {links.map((link, index) => (
-            <li key={index}>
-              <Link
-                href={link.path}
-                className="text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
-              >
-                {link.name}
-              </Link>
-            </li>
-          ))}
+          <li>
+            <Link
+              href="/who-we-are"
+              className="text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
+            >
+              Who We Are
+            </Link>
+          </li>
+          <li onClick={() => setSubToggle(!subToggle)} className="relative">
+            <Link
+              href=""
+              className="text-sm md:text-[15px]  xl:text-[16px] flex  cursor-pointer  hover:text-[#6F6F6F] font-bold"
+            >
+              Our Services
+              <ArrowDown
+                className={`ml-1 size-5 ${
+                  subToggle ? "rotate-180" : ""
+                } transition-all duration-200`}
+              />
+            </Link>
+            <ul
+              className={`absolute flex flex-col top-[50px] -left-[50%]  gap-5 bg-white shadow-lg p-5 w-[200px] rounded-lg ${
+                subToggle ? "block" : "hidden"
+              } `}
+            >
+              {subLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.path}
+                    className="text-sm md:text-[15px]  xl:text-sm  cursor-pointer  hover:text-[#6F6F6F] "
+                  >
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+          <li>
+            <Link
+              href="/case-studies"
+              className="text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
+            >
+              Case Studies
+            </Link>
+          </li>
+          <li>
+            <Link
+              href=""
+              className="text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
+            >
+              Insights
+            </Link>
+          </li>
         </ul>
       </div>
       <div
-        className={`absolute  w-screen h-screen z-[1000] transition-all duration-300 ease-in-out bg-black/85 ${
+        className={`absolute lg:hidden  w-screen h-screen z-[1000] transition-all duration-300 ease-in-out bg-black/85 ${
           toggle ? "left-0 top-0" : "left-[-120%] top-0"
         }`}
       >
@@ -107,17 +168,63 @@ const Navbar = () => {
             <Image src="/close.svg" alt="close" width={30} height={20} />
           </button>
           <ul className="flex flex-col gap-5 items-start">
-            {links.map((link, index) => (
-              <li key={index}>
-                <Link
-                  onClick={() => setToggle(!toggle)}
-                  href={link.path}
-                  className="text-lg md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
+            <li>
+              <Link
+                onClick={() => setToggle(!toggle)}
+                href="/who-we-are"
+                className="text-lg md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
+              >
+                Who We Are
+              </Link>
+            </li>
+            <li onClick={() => setSubToggle(!subToggle)} className="w-full ">
+              <Link
+                href=""
+                className="text-lg md:text-[15px] flex justify-between w-full xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
+              >
+                Our Services
+                <Plus
+                  className={`ml-1 size-5 ${
+                    subToggle ? "rotate-45  " : ""
+                  } transition-all duration-200`}
+                />
+              </Link>
+              <ul
+                className={`flex flex-col gap-5 p-5 ${
+                  subToggle ? " block " : "hidden"
+                }  transition-all duration-200`}
+              >
+                {subLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      onClick={() => setToggle(!toggle)}
+                      href={link.path}
+                      className="text-sm  cursor-pointer  hover:text-[#6F6F6F] font-bold"
+                    >
+                      {link.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+            <li>
+              <Link
+                onClick={() => setToggle(!toggle)}
+                href="/case-studies"
+                className="text-lg md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
+              >
+                Case Studies
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={() => setToggle(!toggle)}
+                href=""
+                className="text-lg md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
+              >
+                Insights
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

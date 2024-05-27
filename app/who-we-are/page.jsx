@@ -10,7 +10,7 @@ const page = () => {
       {/* Hero Section */}
       <div className="w-full flex flex-col-reverse md:flex-row bg-yellow justify-center items-center h-full md:h-screen px-4 py-8 sm:px-6 sm:py-12 lg:px-32 lg:py-36 mb-20">
         {/* Text */}
-        <div className=" h-full justify-center items-center flex-1 flex flex-col py-16">
+        <div className=" h-full justify-center items-center lg:items-start flex-1 flex flex-col py-16">
           <h2 className="text-5xl font-bold leading-snug">
             Creative doers,
             <br /> dreamy realists, <br />
