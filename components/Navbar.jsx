@@ -92,7 +92,7 @@ const Navbar = () => {
       </div>
       <div
         className={`absolute  w-screen h-screen z-[1000] transition-all duration-300 ease-in-out bg-black/85 ${
-          toggle ? "left-0 top-0" : "-left-full top-0"
+          toggle ? "left-0 top-0" : "left-[-120%] top-0"
         }`}
       >
         <div className="w-[calc(100%-50px)] h-full p-5 bg-white">
