@@ -44,7 +44,7 @@ const Navbar = () => {
         aria-label="Toggle navigation"
       >
         <svg
-          class="hs-collapse-open:hidden flex-shrink-0 size-6"
+          class="hs-collapse-open:hidden flex-shrink-0 size-7"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -104,7 +104,7 @@ const Navbar = () => {
             aria-controls="navbar-collapse-with-animation"
             aria-label="Toggle navigation"
           >
-            <Image src="/close.svg" alt="close" width={20} height={20} />
+            <Image src="/close.svg" alt="close" width={30} height={20} />
           </button>
           <ul className="flex flex-col gap-5 items-start">
             {links.map((link, index) => (
