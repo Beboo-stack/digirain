@@ -1,7 +1,11 @@
+"use client";
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
+
   const links = [
     {
       path: "/who-we-are",
@@ -22,7 +26,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full h-full py-7 px-6  md:px-10 xl:px-36 flex justify-between items-center bg-">
+    <div className="w-full h-full py-7 px-6  md:px-10 xl:px-36 flex justify-between items-center">
       {/* Logo */}
       <div className="">
         <Link href="/">
@@ -32,14 +36,15 @@ const Navbar = () => {
         </Link>
       </div>
       <button
+        onClick={() => setToggle(!toggle)}
         type="button"
-        className="md:hidden hs-collapse-toggle flex justify-center items-center gap-x-2 size-16 font-bold rounded-full bg-[#FBFBFB]/10 p-1    hover:border-white/40 disabled:opacity-50 disabled:pointer-events-none"
+        className="md:hidden hs-collapse-toggle flex justify-center items-center gap-x-2 font-bold rounded-full bg-[#FBFBFB]/10 p-2    hover:border-white/40 disabled:opacity-50 disabled:pointer-events-none"
         data-hs-collapse="#navbar-collapse-with-animation"
         aria-controls="navbar-collapse-with-animation"
         aria-label="Toggle navigation"
       >
         <svg
-          class="hs-collapse-open:hidden flex-shrink-0 size-4"
+          class="hs-collapse-open:hidden flex-shrink-0 size-6"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -55,7 +60,7 @@ const Navbar = () => {
           <line x1="3" x2="21" y1="18" y2="18" />
         </svg>
         <svg
-          class="hs-collapse-open:block hidden flex-shrink-0 size-4"
+          class="hs-collapse-open:block hidden flex-shrink-0 size-8"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -84,6 +89,37 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+      </div>
+      <div
+        className={`absolute  w-screen h-screen z-[1000] transition-all duration-300 ease-in-out bg-black/85 ${
+          toggle ? "left-0 top-0" : "-left-full top-0"
+        }`}
+      >
+        <div className="w-[calc(100%-50px)] h-full p-5 bg-white">
+          <button
+            onClick={() => setToggle(!toggle)}
+            type="button"
+            className="md:hidden hs-collapse-toggle flex justify-center items-center gap-x-2 mb-10 font-bold rounded-full bg-[#FBFBFB]/10 p-2    hover:border-white/40 disabled:opacity-50 disabled:pointer-events-none"
+            data-hs-collapse="#navbar-collapse-with-animation"
+            aria-controls="navbar-collapse-with-animation"
+            aria-label="Toggle navigation"
+          >
+            <Image src="/close.svg" alt="close" width={20} height={20} />
+          </button>
+          <ul className="flex flex-col gap-5 items-start">
+            {links.map((link, index) => (
+              <li key={index}>
+                <Link
+                  onClick={() => setToggle(!toggle)}
+                  href={link.path}
+                  className="text-lg md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
