@@ -168,7 +168,7 @@ const Navbar = () => {
             <Image src="/close.svg" alt="close" width={30} height={20} />
           </button>
           <ul className="flex flex-col gap-5 items-start">
-            <li>
+            <li className="w-full">
               <Link
                 onClick={() => setToggle(!toggle)}
                 href="/who-we-are"
@@ -207,7 +207,7 @@ const Navbar = () => {
                 ))}
               </ul>
             </li>
-            <li>
+            <li className="w-full">
               <Link
                 onClick={() => setToggle(!toggle)}
                 href="/case-studies"
@@ -216,7 +216,7 @@ const Navbar = () => {
                 Case Studies
               </Link>
             </li>
-            <li>
+            <li className="w-full">
               <Link
                 onClick={() => setToggle(!toggle)}
                 href=""
