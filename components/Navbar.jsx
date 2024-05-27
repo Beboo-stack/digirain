@@ -38,7 +38,7 @@ const Navbar = () => {
       <button
         onClick={() => setToggle(!toggle)}
         type="button"
-        className="lg:hidden hs-collapse-toggle flex justify-center items-center gap-x-2 font-bold rounded-full bg-[#FBFBFB]/10 p-2    hover:border-white/40 disabled:opacity-50 disabled:pointer-events-none"
+        className="md:hidden hs-collapse-toggle flex justify-center items-center gap-x-2 font-bold rounded-full bg-[#FBFBFB]/10 p-2    hover:border-white/40 disabled:opacity-50 disabled:pointer-events-none"
         data-hs-collapse="#navbar-collapse-with-animation"
         aria-controls="navbar-collapse-with-animation"
         aria-label="Toggle navigation"
@@ -76,7 +76,7 @@ const Navbar = () => {
         </svg>
       </button>
       {/* Menu */}
-      <div className="hidden w-full h-full items-center lg:flex justify-end">
+      <div className="hidden w-full h-full items-center md:flex justify-end">
         <ul className="flex gap-10 items-center">
           {links.map((link, index) => (
             <li key={index}>

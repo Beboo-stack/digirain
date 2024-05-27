@@ -8,9 +8,9 @@ const page = () => {
   return (
     <section className="mb-48  w-full h-full">
       {/* Hero Section */}
-      <div className="w-full flex flex-col-reverse lg:flex-row bg-yellow justify-center items-center h-full md:h-screen px-4 py-8 sm:px-6 sm:py-12 lg:px-32 lg:py-36 mb-20">
+      <div className="w-full flex flex-col-reverse md:flex-row bg-yellow justify-center items-center h-full md:h-screen px-4 py-8 sm:px-6 sm:py-12 lg:px-32 lg:py-36 mb-20">
         {/* Text */}
-        <div className=" h-full flex-1 flex-col justify-center items-center py-16">
+        <div className=" h-full w-full flex-1 flex-col justify-center items-center py-16">
           <h2 className="text-5xl font-bold leading-snug">
             Creative doers,
             <br /> dreamy realists, <br />
@@ -22,7 +22,7 @@ const page = () => {
           </p>
         </div>
         {/* SVG */}
-        <div className=" h-full flex-1">
+        <div className="w-full h-full flex-1 justify-center items-center">
           <Image
             src="/meeting.svg"
             alt="profile"
