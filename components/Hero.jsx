@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen flex flex-col max-w-3xl px-4 pt-[11rem] mx-auto sm:py-[100px] lg:py-[200px] sm:px-6 lg:max-w-4xl justify-center items-center">
+    <div className="w-full h-screen flex flex-col max-w-3xl px-4 pt-[11rem] mx-auto sm:pb-[100px] lg:py-[200px] sm:px-6 lg:max-w-4xl justify-center items-center">
       <h2 className="text-6xl  text-center font-bold leading-normal">
         Increase Your <span className="text-[#ffce26]">Feluence</span>
       </h2>
