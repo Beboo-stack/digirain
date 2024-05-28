@@ -10,9 +10,9 @@ const Services = () => {
           Boost your Website Traffic With SEO Web Services
         </h2>
       </div>
-      <div className="w-full h-full lg:max-w-7xl mx-auto flex flex-col  justify-center items-center gap-8 md:gap-12 mt-20">
+      <div className="w-full h-full lg:max-w-7xl mx-auto flex flex-col  justify-center items-center gap-32 md:gap-12 mt-20">
         {/* <---First---> */}
-        <div className="w-full h-[500px] flex flex-col-reverse md:flex-row justify-center items-center">
+        <div className="w-full h-[500px] flex flex-col-reverse md:flex-row justify-center items-center gap-8">
           <div className="flex flex-col h-full w-full justify-center">
             <h1 className="text-xl font-bold mb-3">Technical SEO</h1>
             <p>
@@ -34,7 +34,7 @@ const Services = () => {
           </div>
         </div>
         {/* <---Second---> */}
-        <div className="w-full h-[700px] flex flex-col-reverse md:flex-row-reverse justify-center items-center">
+        <div className="w-full h-[700px] flex flex-col-reverse md:flex-row-reverse justify-center items-center gap-8">
           <div className="flex flex-col h-full w-full justify-center">
             <h1 className="text-xl font-bold mb-3">Technical SEO</h1>
             <p>
@@ -56,7 +56,7 @@ const Services = () => {
           </div>
         </div>
         {/* <---Third---> */}
-        <div className="w-full h-[500px] flex flex-col-reverse md:flex-row justify-center items-center">
+        <div className="w-full h-[500px] flex flex-col-reverse md:flex-row justify-center items-center gap-8">
           <div className="flex flex-col h-full w-full justify-center">
             <h1 className="text-xl font-bold mb-3">Technical SEO</h1>
             <p>
@@ -78,7 +78,7 @@ const Services = () => {
           </div>
         </div>
         {/* <---Fourth---> */}
-        <div className="w-full h-[500px] flex flex-col-reverse md:flex-row-reverse justify-center items-center">
+        <div className="w-full h-[500px] flex flex-col-reverse md:flex-row-reverse justify-center items-center gap-8">
           <div className="flex flex-col h-full w-full justify-center">
             <h1 className="text-xl font-bold mb-3">Technical SEO</h1>
             <p>
@@ -100,7 +100,7 @@ const Services = () => {
           </div>
         </div>
         {/* <---Fifth---> */}
-        <div className="w-full h-[700px] flex flex-col-reverse md:flex-row justify-center items-center">
+        <div className="w-full h-[700px] flex flex-col-reverse md:flex-row justify-center items-center gap-8">
           <div className="flex flex-col h-full w-full justify-center">
             <h1 className="text-xl font-bold mb-3">Technical SEO</h1>
             <p>
