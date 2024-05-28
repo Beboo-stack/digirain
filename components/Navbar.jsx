@@ -56,7 +56,7 @@ const Navbar = () => {
       <button
         onClick={() => setToggle(!toggle)}
         type="button"
-        className="md:hidden hs-collapse-toggle flex justify-center items-center gap-x-2 font-bold rounded-full bg-[#FBFBFB]/10 p-2    hover:border-white/40 disabled:opacity-50 disabled:pointer-events-none"
+        className="md:hidden hs-collapse-toggle flex justify-center items-center gap-x-2 font-bold rounded-full bg-[#FBFBFB]/10 p-2 hover:border-white/40 disabled:opacity-50 disabled:pointer-events-none"
         data-hs-collapse="#navbar-collapse-with-animation"
         aria-controls="navbar-collapse-with-animation"
         aria-label="Toggle navigation"
@@ -117,7 +117,7 @@ const Navbar = () => {
               />
             </Link>
             <ul
-              className={`absolute flex flex-col top-[50px] -left-[50%]  gap-5 bg-white shadow-lg p-5 w-[200px] rounded-lg ${
+              className={`absolute flex flex-col top-[50px] -left-[50%]  gap-5 z-50 bg-white shadow-lg p-5 w-[200px] rounded-lg ${
                 subToggle ? "block" : "hidden"
               } `}
             >
