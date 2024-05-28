@@ -10,7 +10,7 @@ import React from "react";
 const page = () => {
   return (
     // The SEO Web Services page
-    <section className="w-full h-full mb-48">
+    <section className="w-full h-full mb-48 ">
       {/* The main content section */}
       <div className="w-full flex flex-col md:flex-row bg-[#FFF5D1] justify-center items-center h-full md:h-screen px-4 py-8 sm:px-6 sm:py-12  lg:py-36 xl:px-32 mb-20">
         {/* The text section */}

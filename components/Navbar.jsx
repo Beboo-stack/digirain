@@ -2,9 +2,11 @@
 import { ArrowDown, Plus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
+  // const [issticky, setIsSticky] = useState(false);
+
   const [toggle, setToggle] = useState(false);
 
   const [subToggle, setSubToggle] = useState(false);
@@ -43,8 +45,24 @@ const Navbar = () => {
     },
   ];
 
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 200) {
+  //       setIsSticky(true);
+  //     } else {
+  //       setIsSticky(false);
+  //     }
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
   return (
-    <div className="w-full h-full py-7 px-6  md:px-10 xl:px-36 flex justify-between items-center">
+    <div
+      className={`w-full h-full py-7 px-6 z-[100]  md:px-10 xl:px-36 flex justify-between items-center `}
+    >
       {/* Logo */}
       <div className="">
         <Link href="/">
@@ -104,18 +122,18 @@ const Navbar = () => {
               Who We Are
             </Link>
           </li>
-          <li onClick={() => setSubToggle(!subToggle)} className="relative">
-            <Link
-              href=""
-              className="text-sm md:text-[15px]  xl:text-[16px] flex  cursor-pointer  hover:text-[#6F6F6F] font-bold"
-            >
+          <li
+            onClick={() => setSubToggle(!subToggle)}
+            className="relative flex text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer font-bold"
+          >
+            <p className="flex text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold">
               Our Services
               <ArrowDown
                 className={`ml-1 size-5 ${
                   subToggle ? "rotate-180" : ""
                 } transition-all duration-200`}
               />
-            </Link>
+            </p>
             <ul
               className={`absolute flex flex-col top-[50px] -left-[50%]  gap-5 z-50 bg-white shadow-lg p-5 w-[200px] rounded-lg ${
                 subToggle ? "block" : "hidden"
@@ -159,7 +177,7 @@ const Navbar = () => {
         <div className="w-[calc(100%-50px)] h-full p-5 bg-white">
           <button
             onClick={() => setToggle(!toggle)}
-            type="button"
+            type=""
             className="lg:hidden hs-collapse-toggle flex justify-center items-center gap-x-2 mb-10 font-bold rounded-full bg-[#FBFBFB]/10 p-2    hover:border-white/40 disabled:opacity-50 disabled:pointer-events-none"
             data-hs-collapse="#navbar-collapse-with-animation"
             aria-controls="navbar-collapse-with-animation"
@@ -178,17 +196,14 @@ const Navbar = () => {
               </Link>
             </li>
             <li onClick={() => setSubToggle(!subToggle)} className="w-full ">
-              <Link
-                href=""
-                className="text-lg md:text-[15px] flex justify-between w-full xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
-              >
+              <p className="text-lg md:text-[15px] flex justify-between w-full xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold">
                 Our Services
                 <Plus
                   className={`ml-1 size-5 ${
                     subToggle ? "rotate-45  " : ""
                   } transition-all duration-200`}
                 />
-              </Link>
+              </p>
               <ul
                 className={`flex flex-col gap-5 p-5 ${
                   subToggle ? " block " : "hidden"
