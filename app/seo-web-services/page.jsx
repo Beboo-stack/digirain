@@ -1,5 +1,11 @@
 import Benefits from "@/components/Benefits";
+import Blog from "@/components/Blog";
+import Booking from "@/components/Booking";
+import CarouselSec from "@/components/CarouselSec";
+import Partners2 from "@/components/Partners2";
 import Services from "@/components/Services";
+import Testimonials from "@/components/Testimonials";
+import WhyUs from "@/components/WhyUs";
 import React from "react";
 
 /**
@@ -65,6 +71,20 @@ const page = () => {
       </div>
       <Benefits />
       <Services />
+      <Booking title={"Get a Proposal"} className={"mt-28 mb-0"} />
+      <Partners2
+        className={"mt-0 mb-0"}
+        title={"Elevate your Digital Presence with SEO Technical Tools"}
+        desc={
+          "We craft strategies that drive results. Here’s a glimpse into why choosing us illuminates your path to success."
+        }
+        text={"text-5xl"}
+      />
+      <WhyUs />
+      <Partners2 />
+      <CarouselSec />
+      <Testimonials />
+      <Blog />
     </section>
   );
 };

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import React from "react";
 
-const Partners2 = () => {
+const Partners2 = ({ className, desc, title, text}) => {
   const logos = [
     {
       src: "/airbnb.svg",
@@ -50,20 +50,18 @@ const Partners2 = () => {
 
   return (
     <div
-      className="relative  h-full mt-[180px] overflow-hidden py-12 bg-white mx-auto max-w-screen-lg"
+      className={`relative  h-full mt-[180px] overflow-hidden py-12 bg-white mx-auto max-w-screen-lg ${className}`}
       style={{ width: "100%%" }}
     >
       <div className="w-full h-full flex flex-col justifcy-center items-center gap-3 mb-5 ">
         <p className="text-center capitalize font-bold text-base text-yellow max-w-xs md:max-w-full mx-auto">
           our partners
         </p>
-        <h2 className="text-5xl md:text-6xl text-center font-bold">
-          Step Into Success With Industry Giants
+        <h2 className={` text-center font-bold ${text}`}>
+          {title}
         </h2>
         <p className="text-center max-w-[90%]">
-          Our collaboration allows us to harness the latest innovations,
-          insights, and cutting-edge tools to elevate your digital presence and
-          marketing strategies.
+        {desc}
         </p>
       </div>
       <div className="absolute inset-0 z-20 before:absolute before:left-0 before:top-0  before:h-full before:bg-gradient-to-r before:from-white before:to-transparent before:filter before:blur-3 after:absolute after:right-0 after:top-0   after:h-full after:bg-gradient-to-l after:from-white after:to-transparent after:filter after:blur-3"></div>
