@@ -192,7 +192,7 @@ const Navbar = () => {
               <ul
                 className={`flex flex-col gap-5 p-5 ${
                   subToggle ? " block " : "hidden"
-                }  transition-all duration-200`}
+                }  transition-all duration-200 ease-in-out`}
               >
                 {subLinks.map((link, index) => (
                   <li key={index}>
