@@ -45,20 +45,6 @@ const Navbar = () => {
     },
   ];
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY > 200) {
-  //       setIsSticky(true);
-  //     } else {
-  //       setIsSticky(false);
-  //     }
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   return (
     <div
       className={`w-full h-full py-7 px-6 z-[100]  md:px-10 xl:px-36 flex justify-between items-center `}
@@ -66,7 +52,7 @@ const Navbar = () => {
       {/* Logo */}
       <div className="">
         <Link href="/">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl cursor-pointer text-gray-800 hover:text-[#6F6F6F] font-bold">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl cursor-pointer text-gray-800 hover:text-yellow transition-all duration-300 font-bold">
             DIGIRAIN
           </h2>
         </Link>
@@ -117,7 +103,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/who-we-are"
-              className="text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
+              className="text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-yellow transition-all duration-300 font-bold"
             >
               Who We Are
             </Link>
@@ -126,12 +112,14 @@ const Navbar = () => {
             onClick={() => setSubToggle(!subToggle)}
             className="relative flex text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer font-bold"
           >
-            <p className="flex text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold">
+            <p className="flex text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-yellow transition-all duration-300 font-bold">
               Our Services
               <ArrowDown
                 className={`ml-1 size-5 ${
-                  subToggle ? "rotate-180" : ""
-                } transition-all duration-200`}
+                  subToggle
+                    ? "rotate-180 transition-all ease-in-out"
+                    : " transition-transform ease-in-out"
+                } `}
               />
             </p>
             <ul
@@ -143,7 +131,7 @@ const Navbar = () => {
                 <li key={index}>
                   <Link
                     href={link.path}
-                    className="text-sm md:text-[15px]  xl:text-sm  cursor-pointer  hover:text-[#6F6F6F] "
+                    className="text-sm md:text-[15px]  xl:text-sm  cursor-pointer  hover:text-yellow transition-all duration-300 "
                   >
                     {link.title}
                   </Link>
@@ -154,7 +142,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/case-studies"
-              className="text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
+              className="text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-yellow transition-all duration-300 font-bold"
             >
               Case Studies
             </Link>
@@ -162,7 +150,7 @@ const Navbar = () => {
           <li>
             <Link
               href=""
-              className="text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
+              className="text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-yellow transition-all duration-300 font-bold"
             >
               Insights
             </Link>

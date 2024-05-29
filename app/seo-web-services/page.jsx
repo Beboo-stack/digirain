@@ -1,9 +1,12 @@
+import Accordion from "@/components/Accordion";
 import Benefits from "@/components/Benefits";
 import Blog from "@/components/Blog";
 import Booking from "@/components/Booking";
 import CarouselSec from "@/components/CarouselSec";
+import Partners from "@/components/Partners";
 import Partners2 from "@/components/Partners2";
 import Services from "@/components/Services";
+import Services1 from "@/components/Services1";
 import Testimonials from "@/components/Testimonials";
 import WhyUs from "@/components/WhyUs";
 import React from "react";
@@ -81,9 +84,15 @@ const page = () => {
         text={"text-5xl"}
       />
       <WhyUs />
-      <Partners2 />
+      <Partners
+        head1={"Businesses Growing with Dottopia"}
+        head2={"OUR CLIENTS"}
+        paragraph={"Explore our beloved clients who trust in Dottopia."}
+      />
       <CarouselSec />
       <Testimonials />
+      <Accordion />
+      <Services1 />
       <Blog />
     </section>
   );

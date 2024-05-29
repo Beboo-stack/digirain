@@ -50,7 +50,7 @@ const Partners2 = ({ className, desc, title, text}) => {
 
   return (
     <div
-      className={`relative  h-full mt-[180px] overflow-hidden py-12 bg-white mx-auto max-w-screen-lg ${className}`}
+      className={`relative  h-full overflow-hidden py-12 bg-white mx-auto max-w-screen-lg ${className}`}
       style={{ width: "100%%" }}
     >
       <div className="w-full h-full flex flex-col justifcy-center items-center gap-3 mb-5 ">

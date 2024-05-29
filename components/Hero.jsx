@@ -17,7 +17,7 @@ const Hero = () => {
         your success, pushing your brand to lead in your industry
       </p>
       <div className="w-full h-full flex justify-center">
-        <div class="relative w-full p-1.5 my-10  flex  items-center gap-y-4 h-auto md:h-16 flex-row justify-between rounded-2xl md:shadow-[0px 15px 30px -4px rgba(16, 24, 40, 0.03)] border border-transparent md:bg-white transition-all duration-500 border-gray-700 focus-within:border-yellow">
+        <div class="relative w-full p-1.5 my-10  flex  items-center gap-y-4 h-auto md:h-16 flex-row justify-between rounded-2xl md:shadow-[0px 15px 30px -4px rgba(16, 24, 40, 0.03)] border border-transparent md:bg-white transition-all duration-500 border-black focus-within:border-yellow">
           <input
             type="text"
             name="email"

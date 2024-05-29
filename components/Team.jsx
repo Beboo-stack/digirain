@@ -3,7 +3,7 @@ import React from "react";
 
 const Team = () => {
   return (
-    <div className="flex flex-col md:flex-row w-full h-full justify-center items-center px-4 max-w-[1350px] mx-auto sm:px-[45px] my-[80px]">
+    <div className="flex  flex-col md:flex-row w-full h-full justify-center items-center px-4 max-w-[1350px] mx-auto sm:px-[45px] my-[80px]">
       {/* Text */}
       <div className=" flex flex-col flex-1  justify-center">
         <div className="">
@@ -26,14 +26,17 @@ const Team = () => {
       </div>
 
       {/* Image */}
-      <div className="flex-1 items-center justify-center h-full relative overflow-hidden">
-        <Image
-          alt="profile"
-          src="/profile.jpg"
-          width={500}
-          height={500}
-          className="object-cover w-full h-auto rounded-3xl overflow-hidden"
-        />
+      <div className="flex-1 items-center flex justify-center h-full relative  ">
+        <div className="w-[90%] h-1/2 relative z-[3]">
+          <Image
+            alt="profile"
+            src="/download.jpeg"
+            width={500}
+            height={500}
+            className=" w-full h-full rounded-3xl z-[2]"
+          />
+          <div className="w-full h-full absolute top-0 start-0 rotate-[5deg] bg-yellow rounded-3xl z-[-1]"></div>
+        </div>
       </div>
     </div>
   );

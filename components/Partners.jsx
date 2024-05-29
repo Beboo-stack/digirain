@@ -3,7 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import React from "react";
 
-const Partners = () => {
+const Partners = ({ shadow, head1, head2, paragraph }) => {
   const logos = [
     {
       src: "/airbnb.svg",
@@ -48,15 +48,22 @@ const Partners = () => {
 
   const duplicatedSlides = [...logos, ...logos];
 
+  // before:w-1/4 after:w-1/4
   return (
     <div
       className="relative w-full h-full mt-20 overflow-hidden py-12 bg-white mx-auto max-w-full"
       style={{ width: "100%%" }}
     >
+      <h2 className="text-center capitalize font-bold text-base text-yellow max-w-xs md:max-w-full mx-auto">
+        {head2}
+      </h2>
+      <h1 className={` text-center mx-auto mb-7 font-bold text-5xl w-[70%]`}> {head1}</h1>
       <p className="text-center font-bold mb-20 text-sm max-w-xs md:max-w-full mx-auto">
-        JOIN OVER 500 PARTNERS WHO HAVE CHOSEN US.
+        {paragraph}
       </p>
-      <div className="absolute inset-0 z-20 before:absolute before:left-0 before:top-0 before:w-1/4 before:h-full before:bg-gradient-to-r before:from-white before:to-transparent before:filter before:blur-3 after:absolute after:right-0 after:top-0 after:w-1/4 after:h-full after:bg-gradient-to-l after:from-white after:to-transparent after:filter after:blur-3"></div>
+      <div
+        className={`absolute inset-0 z-20 before:absolute before:left-0 before:top-0  before:h-full before:bg-gradient-to-r before:from-white before:to-transparent before:filter before:blur-3 after:absolute after:right-0 after:top-0  after:h-full after:bg-gradient-to-l after:from-white after:to-transparent after:filter after:blur-3 ${shadow}`}
+      ></div>
 
       <motion.div
         className="flex w-full"

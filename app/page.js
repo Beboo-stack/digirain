@@ -14,7 +14,10 @@ export default function Home() {
   return (
     <div className="w-full h-full  ">
       <Hero />
-      <Partners />
+      <Partners
+        shadow={"before:w-1/4 after:w-1/4"}
+        paragraph={"JOIN OVER 500 PARTNERS WHO HAVE CHOSEN US."}
+      />
       <Team />
       <Counter />
       <Proplems />
