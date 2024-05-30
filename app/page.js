@@ -31,8 +31,8 @@ export default function Home() {
       <Booking title={"Book a Meeting"} />
       <OurServices />
       <CarouselSec />
-      <Testimonials />
-      <Blog />
+      {/* <Testimonials /> */}
+      {/* <Blog /> */}
     </div>
   );
 }

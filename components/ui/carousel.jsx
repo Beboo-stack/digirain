@@ -173,7 +173,7 @@ const CarouselPrevious = React.forwardRef(
         className={cn(
           "absolute hidden xl:flex bg-yellow h-14 w-14 rounded-full",
           orientation === "horizontal"
-            ? "-left-14 top-1/2 -translate-y-1/2"
+            ? " top-1/2 -translate-y-1/2"
             : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
           className
         )}
@@ -201,7 +201,7 @@ const CarouselNext = React.forwardRef(
         className={cn(
           "absolute hidden xl:flex h-14 w-14 bg-yellow rounded-full",
           orientation === "horizontal"
-            ? "-right-14 top-1/2 -translate-y-1/2"
+            ? "right-0 top-1/2 -translate-y-1/2"
             : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
           className
         )}

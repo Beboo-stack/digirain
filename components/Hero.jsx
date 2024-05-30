@@ -1,35 +1,83 @@
-import React from "react";
+"use client";
+import * as React from "react";
+import Autoplay from "embla-carousel-autoplay";
+
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
+
+  const images = [
+    {
+      title: "Creative Doers",
+      link: "/digital-communication-services",
+      path: "/download.jpeg",
+    },
+    {
+      title: " Dreamy Realists",
+      link: "/case-studies",
+      path: "/meeting.svg",
+    },
+    {
+      title: "Dreamy Realists",
+      link: "/performance-marketing",
+      path: "/1.svg",
+    },
+    {
+      title: "Dreamy Realists",
+      link: "/performance-marketing",
+      path: "/2.svg",
+    },
+  ];
+
   return (
-    <div className="w-full h-full lg:h-screen flex flex-col max-w-3xl px-4 pt-[6rem] mx-auto  lg:py-[200px] sm:px-6 lg:max-w-4xl justify-center items-center">
-      <h2 className="text-6xl  text-center font-bold leading-normal">
-        Increase Your <span className="text-[#ffce26]">Feluence</span>
-      </h2>
-      <div className="w-full  mt-1 flex justify-center items-center">
-        <h2 className="text-6xl font-bold text-center">
-          And Grow Your Business
-        </h2>
-      </div>
-      <p className="mt-8  text-center">
-        Dive into a world of growth opportunities powered by data-driven
-        techniques, creative content solutions, and an unwavering commitment to
-        your success, pushing your brand to lead in your industry
-      </p>
-      <div className="w-full h-full flex justify-center">
-        <div class="relative w-full p-1.5 my-10  flex  items-center gap-y-4 h-auto md:h-16 flex-row justify-between rounded-2xl md:shadow-[0px 15px 30px -4px rgba(16, 24, 40, 0.03)] border border-transparent md:bg-white transition-all duration-500 border-black focus-within:border-yellow">
-          <input
-            type="text"
-            name="email"
-            placeholder="Your Brand Name"
-            class="text-base rounded-full text-gray-900 flex-1 py-4 px-6 shadow-[0px 15px 30px -4px rgba(16, 24, 40, 0.03)] md:shadow-none bg-white md:bg-transparent shadow-none placeholder:text-gray-400 focus:outline-none md:w-fit w-full"
-          />
-          <button class="bg-yellow rounded-2xl py-3 px-7 text-base font-bold text-black hover:bg-orange-500 cursor-pointer transition-all duration-500 w-fit">
-            Get a Proposal
-          </button>
-        </div>
-      </div>
-    </div>
+    <Carousel
+      plugins={[plugin.current]}
+      className="w-full h-screen"
+      onMouseEnter={plugin.current.stop}
+      onMouseLeave={plugin.current.reset}
+    >
+      <CarouselContent>
+        {images.map((item) => (
+          <CarouselItem key={item}>
+            <div className="">
+              <CardContent className="flex w-full h-screen items-center justify-center p-0 relative">
+                <Image
+                  src={item.path}
+                  alt="profile"
+                  className="w-full h-full object-fill"
+                  width={500}
+                  height={500}
+                />
+                <div className="absolute top-0 left-0 w-full h-full bg-black/50">
+                  <div className="w-full h-full flex flex-col justify-center items-center">
+                    <h1 className="text-5xl font-bold text-white">
+                      {item.title}  
+                    </h1>
+                    <Link href={item.link} className="text-white">
+                      Link{" "}
+                    </Link>
+                  </div>
+                </div>
+              </CardContent>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
   );
 };
 
