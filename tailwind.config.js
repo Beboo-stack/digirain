@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        tablet: "770px",
+      },
       colors: {
         yellow: "#ffce26",
         border: "hsl(var(--border))",

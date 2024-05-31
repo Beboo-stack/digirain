@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Team = () => {
@@ -19,15 +20,17 @@ const Team = () => {
           consistently delivered measurable results for our clients
         </p>
         <div className="flex w-full justify-center items-center md:justify-start">
-          <p className="bg-[#ffce26] px-4 py-3 w-fit font-bold rounded-md text-black cursor-pointer text-center">
-            See More
-          </p>
+          <Link href="/who-we-are">
+            <p className="bg-[#ffce26] px-4 py-3 w-fit font-bold rounded-md text-black cursor-pointer text-center">
+              See More
+            </p>
+          </Link>
         </div>
       </div>
 
       {/* Image */}
       <div className="flex-1 items-center flex justify-center h-full relative  ">
-        <div className="w-[90%] h-1/2 relative z-[3]">
+        <div className="w-[70%] h-1/2 relative z-[3]">
           <Image
             alt="profile"
             src="/download.jpeg"

@@ -20,13 +20,8 @@ const Hero = () => {
 
   const images = [
     {
-      title: "Creative Doers",
-      link: "/digital-communication-services",
-      path: "/download.jpeg",
-    },
-    {
       title: " Dreamy Realists",
-      link: "/case-studies",
+      link: "/industries",
       path: "/meeting.svg",
     },
     {
@@ -60,10 +55,10 @@ const Hero = () => {
                   width={500}
                   height={500}
                 />
-                <div className="absolute top-0 left-0 w-full h-full bg-black/50">
+                <div className="absolute top-0 left-0 w-full h-full ">
                   <div className="w-full h-full flex flex-col justify-center items-center">
                     <h1 className="text-5xl font-bold text-white">
-                      {item.title}  
+                      {item.title}
                     </h1>
                     <Link href={item.link} className="text-white">
                       Link{" "}

@@ -11,24 +11,24 @@ const Navbar = () => {
 
   const [subToggle, setSubToggle] = useState(false);
 
-  const links = [
-    {
-      path: "/who-we-are",
-      name: "Who We Are",
-    },
-    {
-      path: "",
-      name: "Our Services",
-    },
-    {
-      path: "/case-studies",
-      name: "Case Studies",
-    },
-    {
-      path: "/insights",
-      name: "Insights",
-    },
-  ];
+  // const links = [
+  //   {
+  //     path: "/who-we-are",
+  //     name: "Who We Are",
+  //   },
+  //   {
+  //     path: "",
+  //     name: "Our Services",
+  //   },
+  //   {
+  //     path: "/case-studies",
+  //     name: "Case Studies",
+  //   },
+  //   {
+  //     path: "/_blank",
+  //     name: "Download Portfolio",
+  //   },
+  // ];
 
   const subLinks = [
     {
@@ -45,11 +45,9 @@ const Navbar = () => {
     },
   ];
 
-  
-
   return (
     <div
-      className={`w-full h-full py-7 px-6 z-[100]  md:px-10 xl:px-36 flex justify-between items-center `}
+      className={`w-full h-full py-7 px-6 z-[100]  md:px-10 xl:px-36 flex justify-between items-center`}
     >
       {/* Logo */}
       <div className="">
@@ -100,8 +98,8 @@ const Navbar = () => {
         </svg>
       </button>
       {/* Menu */}
-      <div className="hidden w-full h-full items-center md:flex justify-end">
-        <ul className="flex gap-10 items-center">
+      <div className="hidden w-full h-full items-center tablet:flex justify-end">
+        <ul className="flex tablet:flex tablet:gap-5 lg:gap-10 items-center ">
           <li>
             <Link
               href="/who-we-are"
@@ -111,20 +109,27 @@ const Navbar = () => {
             </Link>
           </li>
           <li
-            onClick={() => setSubToggle(!subToggle)}
-            className="relative flex text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer font-bold"
+            onMouseEnter={() => setSubToggle(true)}
+            onMouseLeave={(e) => {
+              const isSubmenuHovered =
+                e.relatedTarget && e.relatedTarget.closest(".submenu");
+              if (!isSubmenuHovered) {
+                setSubToggle(false);
+              }
+            }}
+            className=" flex text-sm md:text-[15px]  xl:text-[16px] relative cursor-pointer font-bold trasnsition-all duration-300 ease-in-out"
           >
             <p className="flex text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold">
               Our Services
               <ArrowDown
                 className={`ml-1 size-5 ${
                   subToggle ? "rotate-180" : ""
-                } transition-all duration-200`}
+                } transition-all duration-500`}
               />
             </p>
             <ul
-              className={`absolute flex flex-col top-[50px] -left-[50%]  gap-5 z-50 bg-white shadow-lg p-5 w-[200px] rounded-lg ${
-                subToggle ? "block" : "hidden"
+              className={`absolute flex transition-all duration-700 ease-in-out flex-col top-[50px] -left-[50%]  submenu gap-5 z-50 bg-white shadow-lg p-5 w-[200px] rounded-lg ${
+                subToggle ? "flex  " : "hidden"
               } `}
             >
               {subLinks.map((link, index) => (
@@ -141,18 +146,27 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="/case-studies"
+              href="/industries"
               className="text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
             >
-              Case Studies
+              Industries
             </Link>
           </li>
           <li>
             <Link
-              href=""
+              href="/contact-us"
               className="text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
             >
-              Insights
+              Contact Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/programming.pdf"
+              target="_blank"
+              className="text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold bg-yellow p-3 rounded-md"
+            >
+              Download Portfolio
             </Link>
           </li>
         </ul>
@@ -213,19 +227,29 @@ const Navbar = () => {
             <li className="w-full">
               <Link
                 onClick={() => setToggle(!toggle)}
-                href="/case-studies"
+                href="/industries"
                 className="text-lg md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
               >
-                Case Studies
+                Industries
               </Link>
             </li>
             <li className="w-full">
               <Link
                 onClick={() => setToggle(!toggle)}
-                href=""
+                href="/contact-us"
                 className="text-lg md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold"
               >
-                Insights
+                Contact Us
+              </Link>
+            </li>
+            <li className="w-full p-6">
+              <Link
+                onClick={() => setToggle(!toggle)}
+                href="/programming.pdf"
+                target="_blank"
+                className="text-lg md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#6F6F6F] font-bold bg-yellow p-3 rounded-md"
+              >
+                Download Portfolio
               </Link>
             </li>
           </ul>
