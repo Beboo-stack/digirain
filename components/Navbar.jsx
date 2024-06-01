@@ -45,6 +45,17 @@ const Navbar = () => {
     },
   ];
 
+  const subLinks2 = [
+    {
+      title: "Our Vision",
+      path: "/who-we-are#our-vision",
+    },
+    {
+      title: "Our Mision",
+      path: "/who-we-are#our-mision",
+    },
+  ];
+
   return (
     <div
       className={`w-full h-full py-7 px-6 z-[100]  md:px-10 xl:px-36 flex justify-between items-center`}
@@ -100,46 +111,41 @@ const Navbar = () => {
       {/* Menu */}
       <div className="hidden w-full h-full items-center tablet:flex justify-end">
         <ul className="flex tablet:flex tablet:gap-5 lg:gap-10 items-center ">
-          <li>
-            <Link
-              href="/who-we-are"
-              className="text-sm md:text-[15px] text-white  xl:text-[16px]  cursor-pointer  hover:text-[#ec5695] font-bold"
-            >
-              Who We Are
-            </Link>
-          </li>
-          <li
-            onMouseEnter={() => setSubToggle(true)}
-            onMouseLeave={(e) => {
-              const isSubmenuHovered =
-                e.relatedTarget && e.relatedTarget.closest(".submenu");
-              if (!isSubmenuHovered) {
-                setSubToggle(false);
-              }
-            }}
-            className=" flex text-sm md:text-[15px] text-white bg-[]  xl:text-[16px] relative cursor-pointer font-bold trasnsition-all duration-300 ease-in-out"
-          >
+          <div className="relative group">
+            <li className="">
+              <Link
+                href="/who-we-are"
+                className="text-sm md:text-[15px] text-white  xl:text-[16px]  cursor-pointer  hover:text-[#ec5695] font-bold"
+              >
+                Who We Are
+              </Link>
+              <ul
+                className={`absolute transition-all invisible group-hover:visible flex -left-[50%] top-[50px]  duration-700 ease-in-out flex-col submenu gap-5 z-50 bg-[#11b] shadow-lg p-5 w-[200px] rounded-lg `}
+              >
+                {subLinks2.map((link) => (
+                  <li
+                    key={link.title}
+                    className="text-sm md:text-[15px] text-white  xl:text-[16px]  cursor-pointer hover:text-[#ec5695] font-bold"
+                  >
+                    <Link href={link.path}>{link.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          </div>
+          <li className=" flex text-sm md:text-[15px] text-white group  xl:text-[16px] relative cursor-pointer font-bold trasnsition-all duration-300 ease-in-out">
             <p className="flex text-sm md:text-[15px]  xl:text-[16px]  cursor-pointer  hover:text-[#ec5695] font-bold">
               Our Services
-              <ArrowDown
-                className={`ml-1 size-5 ${
-                  subToggle ? "rotate-180" : ""
-                } transition-all duration-500`}
-              />
             </p>
             <ul
-              className={`absolute flex transition-all duration-700 ease-in-out flex-col top-[50px] -left-[50%]  submenu gap-5 z-50 bg-[#11b] shadow-lg p-5 w-[200px] rounded-lg ${
-                subToggle ? "flex  " : "hidden"
-              } `}
+              className={`absolute transition-all flex top-[50px] -left-[50%] duration-300 ease-in-out flex-col   submenu gap-5 z-50 bg-[#11b] shadow-lg p-5 w-[200px] rounded-lg invisible group-hover:visible `}
             >
               {subLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.path}
-                    className="text-sm md:text-[15px] text-white  xl:text-sm  cursor-pointer  hover:text-[#ec5695] "
-                  >
-                    {link.title}
-                  </Link>
+                <li
+                  key={index}
+                  className="text-sm md:text-[15px] text-white w-full  xl:text-sm  cursor-pointer  hover:text-[#ec5695] "
+                >
+                  <Link href={link.path}>{link.title}</Link>
                 </li>
               ))}
             </ul>

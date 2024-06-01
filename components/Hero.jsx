@@ -27,7 +27,7 @@ const Hero = () => {
     {
       title: "Dreamy Realists",
       link: "/performance-marketing",
-      path: "/1.svg",
+      path: "/responsive.png",
     },
     {
       title: "Dreamy Realists",
