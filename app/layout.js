@@ -1,11 +1,11 @@
 "use client";
-import { Inter } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Playfair_Display({ subsets: ["latin"] });
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -32,10 +32,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="w-full h-full relative">
+        <div className="w-full h-full relative bg-[#111b58] text-white">
           <div
             className={`absolute top-0 left-0 w-full z-[100] ${
-              issticky ? "sticky top-0 left-0 bg-white" : ""
+              issticky ? "sticky top-0 left-0 bg-[#fbcb13]" : ""
             }`}
           >
             <Navbar />

@@ -8,7 +8,7 @@ const page = () => {
   return (
     <section className="mb-48  w-full h-full">
       {/* Hero Section */}
-      <div className="w-full flex flex-col-reverse md:flex-row bg-yellow justify-center items-center h-full md:h-screen px-4 py-8 sm:px-6 sm:py-12 lg:px-32 lg:py-36 mb-20">
+      <div className="w-full flex flex-col-reverse md:flex-row  justify-center items-center h-full md:h-screen px-4 py-8 sm:px-6 sm:py-12 lg:px-32 lg:py-36 mb-20">
         {/* Text */}
         <div className=" h-full justify-center items-center lg:items-start flex-1 flex flex-col py-16">
           <h2 className="text-5xl font-bold leading-snug">
@@ -26,7 +26,7 @@ const page = () => {
           <Image
             src="/meeting.svg"
             alt="profile"
-            className=" bg-yellow w-full h-full"
+            className=" w-full h-full"
             width={500}
             height={500}
           />

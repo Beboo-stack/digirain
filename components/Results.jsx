@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 const Results = () => {
   return (
-    <section className="bg-[#FFF5D1] text-black mt-20">
+    <section className="bg-[#ec5396] text-black mt-20">
       <div className="w-full h-full px-4 py-8 sm:px-6 sm:py-14 lg:px-32 lg:py-20 flex flex-col md:flex-row justify-between items-center">
         {/* Text */}
         <div className="flex flex-1 flex-col gap-5">
@@ -19,15 +19,15 @@ const Results = () => {
         <div className="flex-1 flex flex-col justify-start md:justify-start items-start w-full h-full">
           <div className="mb-5">
             <p className=" font-bold text-yellow ">RESULTS DRIVEN</p>
-            <h2 className="text-5xl font-bold">
+            <h2 className="text-5xl font-bold text-white">
               We Keep The Focus On Driving Results.
             </h2>
-          </div>
-          <p className="mb-5">
+          </div> 
+          <p className="mb-5 text-white">
             Want to learn more about the results we’ve driven for our clients?
             Check out our portfolio for examples of our work.
           </p>
-          <Button variant="default" className="bg-yellow text-black font-bold capitalize text-base py-6">our work</Button>
+          <Button variant="default" className="bg-[#037f36] text-white font-bold capitalize text-base py-6">our work</Button>
         </div>
       </div>
     </section>

@@ -21,7 +21,7 @@ const page = () => {
     // The SEO Web Services page
     <section className="w-full h-full mb-48 ">
       {/* The main content section */}
-      <div className="w-full flex flex-col md:flex-row bg-[#FFF5D1] justify-center items-center h-full md:h-screen px-4 py-8 sm:px-6 sm:py-12  lg:py-36 xl:px-32 mb-20">
+      <div className="w-full flex flex-col md:flex-row  justify-center items-center h-full md:h-screen px-4 py-8 sm:px-6 sm:py-12  lg:py-36 xl:px-32 mb-20">
         {/* The text section */}
         <div className=" h-full justify-center items-center lg:items-start w-full flex flex-col py-16">
           {/* The title */}
@@ -39,7 +39,7 @@ const page = () => {
             Consultation
           </p>
           {/* The button */}
-          <p className="font-bold mt-5 bg-yellow px-5 py-3 rounded-md">
+          <p className="font-bold mt-5 bg-[#037f36] hover:text-[#ec5396] cursor-pointer px-5 py-3 rounded-md">
             Get A Free Consultation
           </p>
         </div>
@@ -91,9 +91,9 @@ const page = () => {
       />
       <CarouselSec />
       <Testimonials />
-      <Accordion />
+      {/* <Accordion /> */}
       <Services1 />
-      <Blog />
+      {/* <Blog /> */}
     </section>
   );
 };

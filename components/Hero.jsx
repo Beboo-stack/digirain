@@ -22,7 +22,7 @@ const Hero = () => {
     {
       title: " Dreamy Realists",
       link: "/industries",
-      path: "/meeting.svg",
+      path: "/19 cover.jpg",
     },
     {
       title: "Dreamy Realists",
@@ -39,7 +39,7 @@ const Hero = () => {
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-full h-screen"
+      className="w-full h-screen bg-[#111b58]"
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
@@ -51,16 +51,16 @@ const Hero = () => {
                 <Image
                   src={item.path}
                   alt="profile"
-                  className="w-full h-full object-fill"
+                  className="w-full h-full object-contain md:object-fill"
                   width={500}
                   height={500}
                 />
-                <div className="absolute top-0 left-0 w-full h-full ">
+                <div className="absolute top-44 left-0 w-full h-full ">
                   <div className="w-full h-full flex flex-col justify-center items-center">
                     <h1 className="text-5xl font-bold text-white">
                       {item.title}
                     </h1>
-                    <Link href={item.link} className="text-white">
+                    <Link href={item.link} className="text-black">
                       Link{" "}
                     </Link>
                   </div>

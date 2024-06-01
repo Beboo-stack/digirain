@@ -6,7 +6,7 @@ import React from "react";
 const Footer = () => {
   return (
     <section>
-      <div className="bg-[#FFCE26] text-black">
+      <div className="bg-[#ff3301] text-white">
         <div className="w-full h-full px-4 py-8 sm:px-6 sm:py-14 lg:px-32 lg:py-24 flex flex-col md:flex-row justify-between items-center">
           {/* Text */}
           <div className="flex flex-1 flex-col gap-5">
@@ -19,7 +19,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex-1 flex justify-start md:justify-end items-center w-full h-full">
-            <p className="capitalize font-bold py-4 px-5 bg-white w-fit rounded-lg mt-6">
+            <p className="capitalize font-bold py-4 px-5 bg-[#037f36] text-white w-fit rounded-lg mt-6">
               get a proposal
             </p>
           </div>

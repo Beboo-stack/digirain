@@ -51,18 +51,21 @@ const Partners = ({ shadow, head1, head2, paragraph }) => {
   // before:w-1/4 after:w-1/4
   return (
     <div
-      className="relative w-full h-full mt-20 overflow-hidden py-12 bg-white mx-auto max-w-full"
+      className="relative w-full h-full mt-20 overflow-hidden py-12  mx-auto max-w-full"
       style={{ width: "100%%" }}
     >
       <h2 className="text-center capitalize font-bold text-base text-yellow max-w-xs md:max-w-full mx-auto">
         {head2}
       </h2>
-      <h1 className={` text-center mx-auto mb-7 font-bold text-5xl w-[70%]`}> {head1}</h1>
+      <h1 className={` text-center mx-auto mb-7 font-bold text-5xl w-[70%]`}>
+        {" "}
+        {head1}
+      </h1>
       <p className="text-center font-bold mb-20 text-sm max-w-xs md:max-w-full mx-auto">
         {paragraph}
       </p>
       <div
-        className={`absolute inset-0 z-20 before:absolute before:left-0 before:top-0  before:h-full before:bg-gradient-to-r before:from-white before:to-transparent before:filter before:blur-3 after:absolute after:right-0 after:top-0  after:h-full after:bg-gradient-to-l after:from-white after:to-transparent after:filter after:blur-3 ${shadow}`}
+        className={`absolute inset-0 z-20 before:absolute before:left-0 before:top-0  before:h-full before:bg-gradient-to-r before:from-[#111b58] before:to-transparent before:filter before:blur-3 after:absolute after:right-0 after:top-0  after:h-full after:bg-gradient-to-l after:from-[#111b58] after:to-transparent after:filter after:blur-3 ${shadow}`}
       ></div>
 
       <motion.div

@@ -41,11 +41,11 @@ const CoreValues = () => {
   ];
 
   return (
-    <section className=" text-black mt-12">
+    <section className=" text-white mt-12">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div className="mx-auto max-w-5xl text-center mb-24">
           <div className="">
-            <h2 className="text-center text-yellow font-bold">CORE VALUES</h2>
+            <h2 className="text-center text-white font-bold">CORE VALUES</h2>
             <h2 className="text-3xl font-bold sm:text-5xl">
               What makes us different
             </h2>
@@ -60,10 +60,10 @@ const CoreValues = () => {
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {CoreValues.map((item) => (
             <div
-              className=" flex rounded-xl  space-x-3 bg-[#FFF5D1]  py-5 px-3 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
+              className=" flex rounded-xl  space-x-3 bg-[#ec5396]  py-5 px-3 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
               key={item.id}
             >
-              <div className="w-full h-[200px] bg-[#FFCE26] rounded-xl flex-1 flex justify-center items-center">
+              <div className="w-full h-[200px]  rounded-xl flex-1 flex justify-center items-center">
                 <Image
                   src={item.svg}
                   className="w-full"
@@ -74,7 +74,7 @@ const CoreValues = () => {
               </div>
 
               <div className="w-full h-ful1 flex-1 flex flex-col justify-center items-start">
-                <h2 className="mt-4 text-base font-bold text-black">
+                <h2 className="mt-4 text-base font-bold text-white">
                   {item.title}
                 </h2>
                 <p className="mt-3 text-sm ">{item.description}</p>

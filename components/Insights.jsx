@@ -3,7 +3,7 @@ import React from "react";
 const Insights = () => {
   const Insights = [
     {
-      num: "10$+",
+      num: "7+",
       desc: "Years on the local and the global market",
     },
     {
@@ -11,7 +11,7 @@ const Insights = () => {
       desc: "Satisfied Clients on the local and the global market",
     },
     {
-      num: "1K+",
+      num: "2K+",
       desc: "Projects Delivered across all services we deliver",
     },
     {

@@ -47,7 +47,7 @@ const Benefits = () => {
               height={100}
             />
             <h1 className="text-lg font-bold">{insight.title}</h1>
-            <p className=" mt-2 text-base text-gray-600">{insight.desc}</p>
+            <p className=" mt-2 text-base">{insight.desc}</p>
           </div>
         ))}
       </div>

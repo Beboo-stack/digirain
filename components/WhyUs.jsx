@@ -76,7 +76,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <div className="max-w-screen-xl mx-auto px-8 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+    <div className="max-w-screen-xl mx-auto px-8 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 ">
       <div className="w-full h-full flex flex-col justifcy-center items-center gap-3 mb-20 ">
         <p className="text-center capitalize font-bold text-base text-yellow max-w-xs md:max-w-full mx-auto">
           WHY CHOOSE US
@@ -91,9 +91,9 @@ const WhyUs = () => {
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-2 lg:grid-cols-3  md:gap-16">
         {/* <---First---> */}
-        <div className=" rounded-2xl border border-yellow shadow-sm bg-[#FFF5D1]">
+        <div className=" rounded-2xl border border-yellow shadow-sm bg-[#ec5396]  ">
           <div className="pt-6 px-5 mb-5 ">
-            <h2 className="text-4xl font-bold text-gray-900">DIGIRAIN</h2>
+            <h2 className="text-4xl font-bold text-white">DIGIRAIN</h2>
           </div>
 
           <div className="px-5 pb-10 ">
@@ -112,7 +112,7 @@ const WhyUs = () => {
         {/* <---Second---> */}
         <div className=" rounded-2xl border border-gray-300  shadow-sm ">
           <div className="pt-6 px-5 mb-5 ">
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-white">
               Local Marketing Agency
             </h2>
           </div>
@@ -134,7 +134,7 @@ const WhyUs = () => {
         {/* <---Third---> */}
         <div className=" rounded-2xl border border-gray-300  shadow-sm">
           <div className="pt-6 px-5 mb-5 ">
-            <h2 className="text-2xl font-bold text-gray-900">
+            <h2 className="text-2xl font-bold text-white">
               In-House Marketing
             </h2>
           </div>

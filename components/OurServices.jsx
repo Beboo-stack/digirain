@@ -63,7 +63,7 @@ const OurServices = () => {
             {features.map((item, idx) => (
               <li
                 key={idx}
-                className="bg-white space-y-3 p-4 border-4 border-[#EDEDED] rounded-2xl"
+                className="bg-[#ec5396] space-y-3 p-4 border-4 border-[#fff1dc] rounded-2xl"
               >
                 <div className="text-indigo-600 pb-3 flex justify-center items-center w-full h-[200px]">
                   <Image
@@ -85,7 +85,7 @@ const OurServices = () => {
                       {item.title}{" "}
                     </li>
                   ))}
-                  <p className="font-bold text-lg underline mt-8 cursor-pointer">
+                  <p className="font-bold text-lg underline mt-8 cursor-pointer text-[#fbcb13]">
                     Explore The Service
                   </p>
                 </ul>
