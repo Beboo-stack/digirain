@@ -111,7 +111,7 @@ const Navbar = () => {
       {/* Menu */}
       <div className="hidden w-full h-full items-center tablet:flex justify-end">
         <ul className="flex tablet:flex tablet:gap-5 lg:gap-10 items-center ">
-          <div className="relative group">
+          <div className="relative group">  
             <li className="">
               <Link
                 href="/who-we-are"
@@ -120,7 +120,7 @@ const Navbar = () => {
                 Who We Are
               </Link>
               <ul
-                className={`absolute transition-all invisible group-hover:visible flex -left-[50%] top-[50px]  duration-700 ease-in-out flex-col submenu gap-5 z-50 bg-[#11b] shadow-lg p-5 w-[200px] rounded-lg `}
+                className={`absolute transition-all  invisible group-hover:visible flex  -left-[50%] top-[50px]  duration-700 ease-in-out flex-col submenu gap-5 z-50 bg-[#11b] shadow-lg p-5 w-[200px] rounded-lg `}
               >
                 {subLinks2.map((link) => (
                   <li

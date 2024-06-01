@@ -51,7 +51,7 @@ const Partners = ({ shadow, head1, head2, paragraph }) => {
   // before:w-1/4 after:w-1/4
   return (
     <div
-      className="relative w-full h-full mt-20 overflow-hidden py-12  mx-auto max-w-full"
+      className="relative w-full h-full mt-20 overflow-hidden py-12 mb-[80px]  mx-auto max-w-full"
       style={{ width: "100%%" }}
     >
       <h2 className="text-center capitalize font-bold text-base text-yellow max-w-xs md:max-w-full mx-auto">

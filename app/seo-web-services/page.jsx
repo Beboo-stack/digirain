@@ -9,6 +9,7 @@ import Services from "@/components/Services";
 import Services1 from "@/components/Services1";
 import Testimonials from "@/components/Testimonials";
 import WhyUs from "@/components/WhyUs";
+import Link from "next/link";
 import React from "react";
 
 /**
@@ -39,9 +40,11 @@ const page = () => {
             Consultation
           </p>
           {/* The button */}
-          <p className="font-bold mt-5 bg-[#037f36] hover:text-[#ec5396] cursor-pointer px-5 py-3 rounded-md">
-            Get A Free Consultation
-          </p>
+          <Link href="/contact-us">
+            <p className="font-bold mt-5 bg-[#037f36] hover:text-[#ec5396] cursor-pointer px-5 py-3 rounded-md">
+              Get A Free Consultation
+            </p>
+          </Link>
         </div>
         {/* The balls section */}
         <div className="h-full w-full justify-center items-center flex gap-10">
@@ -90,9 +93,9 @@ const page = () => {
         paragraph={"Explore our beloved clients who trust in Dottopia."}
       />
       <CarouselSec />
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* <Accordion /> */}
-      <Services1 />
+      {/* <Services1 /> */}
       {/* <Blog /> */}
     </section>
   );

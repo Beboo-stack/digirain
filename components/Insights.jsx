@@ -15,7 +15,7 @@ const Insights = () => {
       desc: "Projects Delivered across all services we deliver",
     },
     {
-      num: "2M$+",
+      num: "2M+",
       desc: "Ads Spending on different platforms",
     },
   ];
