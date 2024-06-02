@@ -6,46 +6,46 @@ import React from "react";
 const Partners = ({ shadow, head1, head2, paragraph }) => {
   const logos = [
     {
-      src: "/Dr Aseel.png",
+      src: "/partners/Dr Aseel.png",
     },
     {
-      src: "/Dr lobna.png",
+      src: "/partners/Dr lobna.png",
     },
     {
-      src: "/Edward.png",
+      src: "/partners/Edward.png",
     },
     {
-      src: "/Godablaze.png",
+      src: "/partners/Godablaze.png",
     },
     {
-      src: "/Greecap.png",
+      src: "/partners/Greecap.png",
     },
     {
-      src: "/Moses.png",
+      src: "/partners/Moses.png",
     },
     {
-      src: "/Wild valley honey.png",
+      src: "/partners/Wild valley honey.png",
     },
     {
-      src: "/Dr Aseel.png",
+      src: "/partners/Dr Aseel.png",
     },
     {
-      src: "/Dr lobna.png",
+      src: "/partners/Dr lobna.png",
     },
     {
-      src: "/Edward.png",
+      src: "/partners/Edward.png",
     },
     {
-      src: "/Godablaze.png",
+      src: "/partners/Godablaze.png",
     },
     {
-      src: "/Greecap.png",
+      src: "/partners/Greecap.png",
     },
     {
-      src: "/Moses.png",
+      src: "/partners/Moses.png",
     },
     {
-      src: "/Wild valley honey.png",
+      src: "/partners/Wild valley honey.png",
     },
   ];
 
