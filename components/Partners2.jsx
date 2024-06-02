@@ -6,43 +6,43 @@ import React from "react";
 const Partners2 = ({ className, desc, title, text }) => {
   const logos = [
     {
-      src: "/airbnb.svg",
+      src: "/Giants/airbnb.svg",
     },
     {
-      src: "/disney.svg",
+      src: "/Giants/disney.svg",
     },
     {
-      src: "/apple-music-3.svg",
+      src: "/Giants/apple-music-3.svg",
     },
     {
-      src: "/disney.svg",
+      src: "/Giants/disney.svg",
     },
     {
-      src: "/airbnb.svg",
+      src: "/Giants/airbnb.svg",
     },
     {
-      src: "/disney.svg",
+      src: "/Giants/disney.svg",
     },
     {
-      src: "/apple-music-3.svg",
+      src: "/Giants/apple-music-3.svg",
     },
     {
-      src: "/disney.svg",
+      src: "/Giants/disney.svg",
     },
     {
-      src: "/spark-1.svg",
+      src: "/Giants/spark-1.svg",
     },
     {
-      src: "/samsung.svg",
+      src: "/Giants/samsung.svg",
     },
     {
-      src: "/spark-1.svg",
+      src: "/Giants/spark-1.svg",
     },
     {
-      src: "/samsung.svg",
+      src: "/Giants/samsung.svg",
     },
     {
-      src: "/spark-1.svg",
+      src: "/Giants/spark-1.svg",
     },
   ];
 

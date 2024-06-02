@@ -39,9 +39,9 @@ const page = () => {
         {/* SVG */}
         <div className="h-full flex-1 justify-center items-center">
           <Image
-            src="/meeting.svg"
+            src="/Characters/character 2.png"
             alt="profile"
-            className=" w-full h-full"
+            className=" w-full h-full object-cover md:object-fill lg:object-cover"
             width={500}
             height={500}
           />

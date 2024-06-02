@@ -4,17 +4,17 @@ import React from "react";
 const OurServices = () => {
   const features = [
     {
-      icon: "/1.svg",
+      icon: "/ilustration/1.svg",
       title: "Build on your terms",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
     },
     {
-      icon: "/2.svg",
+      icon: "/ilustration/2.svg",
       title: "Safe to use",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
     },
     {
-      icon: "/3.svg",
+      icon: "/ilustration/3.svg",
       title: "Flexible",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
     },

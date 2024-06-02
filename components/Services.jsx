@@ -25,7 +25,7 @@ const Services = () => {
           </div>
           <div className="w-full h-full flex justify-end items-end">
             <Image
-              src="/code.svg"
+              src="/ilustration/code.svg"
               alt="technical-seo"
               className="w-full h-full "
               width={500}
@@ -69,7 +69,7 @@ const Services = () => {
           </div>
           <div className="w-full h-full flex justify-end items-end">
             <Image
-              src="/code.svg"
+              src="/ilustration/code.svg"
               alt="technical-seo"
               className="w-full h-full "
               width={500}
@@ -91,7 +91,7 @@ const Services = () => {
           </div>
           <div className="w-full h-full flex justify-end items-end">
             <Image
-              src="/code.svg"
+              src="/ilustration/code.svg"
               alt="technical-seo"
               className="w-full h-full "
               width={500}

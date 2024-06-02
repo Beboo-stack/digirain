@@ -19,9 +19,11 @@ const Form = () => {
   const schema = z.object({
     name: z.string().nonempty().min(3),
     phone: z.string().min(11),
-    message: z.string().min(10),
-    companyUrl: z.string().url().optional(),
-    companyName: z.string().nonempty().min(3).optional(),
+    message: z
+      .string()
+      .min(10, { message: "Message must be at least 10 characters" }),
+    // companyUrl: z.string().url().optional(),
+    // companyName: z.string().min(3).optional(),
     email: z.string().email(),
   });
 
@@ -43,13 +45,13 @@ const Form = () => {
       const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 
       const templateParams = {
-        from_name: formData.name,
         to_name: "johnathan",
+        From_Name: formData.name,
+        Phone: formData.phone,
+        Email: formData.email,
         message: formData.message,
-        companyUrl: formData.companyUrl,
-        companyName: formData.companyName,
-        phone: formData.phone,
-        email: formData.email,
+        Company_Url: formData.companyUrl,
+        Company_Name: formData.companyName,
       };
 
       if (!formData.name || !formData.phone) return;
@@ -83,6 +85,8 @@ const Form = () => {
       console.error("Form validation failed:", error.errors);
       submitButton.disabled = false;
       submitButton.textContent = "Send Enquiry";
+      const message = error.errors[0].message;
+      alert(message);
     }
   };
 
@@ -118,10 +122,11 @@ const Form = () => {
                   </label>
                   <input
                     name="name"
+                    minLength={3}
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full rounded-lg border-gray-200 p-3 text-sm text-black bg-white "
-                    placeholder="Name"
+                    placeholder="Full Name"
                     type="text"
                     id="name"
                     required
@@ -151,6 +156,7 @@ const Form = () => {
                     </label>
                     <input
                       name="phone"
+                      minLength={11}
                       value={formData.phone}
                       onChange={handleChange}
                       title="000-000-0000"
@@ -172,7 +178,7 @@ const Form = () => {
                         onChange={handleChange}
                         title="Company Name"
                         type="text"
-                        placeholder="Company Name"
+                        placeholder="Company Name   (Optional)"
                         className="text-black w-full p-3 rounded-lg border-gray-500 bg-white"
                       />
                     </label>
@@ -186,7 +192,7 @@ const Form = () => {
                         onChange={handleChange}
                         title="Company Url"
                         type="url"
-                        placeholder="Company Url"
+                        placeholder="Company Url   (Optional)"
                         className="text-black w-full p-3 rounded-lg border-gray-500 bg-white"
                       />
                     </label>
@@ -203,7 +209,8 @@ const Form = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full rounded-lg border-gray-200 p-3 text-sm text-black bg-white"
-                    placeholder="Message"
+                    placeholder="Tell us more about your project.
+                    "
                     rows="8"
                     id="message"
                   ></textarea>

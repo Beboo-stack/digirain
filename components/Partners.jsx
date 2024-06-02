@@ -6,43 +6,46 @@ import React from "react";
 const Partners = ({ shadow, head1, head2, paragraph }) => {
   const logos = [
     {
-      src: "/airbnb.svg",
+      src: "/Dr Aseel.png",
     },
     {
-      src: "/disney.svg",
+      src: "/Dr lobna.png",
     },
     {
-      src: "/apple-music-3.svg",
+      src: "/Edward.png",
     },
     {
-      src: "/disney.svg",
+      src: "/Godablaze.png",
     },
     {
-      src: "/airbnb.svg",
+      src: "/Greecap.png",
     },
     {
-      src: "/disney.svg",
+      src: "/Moses.png",
     },
     {
-      src: "/apple-music-3.svg",
+      src: "/Wild valley honey.png",
     },
     {
-      src: "/disney.svg",
+      src: "/Dr Aseel.png",
     },
     {
-      src: "/spark-1.svg",
+      src: "/Dr lobna.png",
     },
     {
-      src: "/samsung.svg",
+      src: "/Edward.png",
     },
     {
-      src: "/spark-1.svg",
+      src: "/Godablaze.png",
     },
     {
-      src: "/samsung.svg",
+      src: "/Greecap.png",
     },
     {
-      src: "/spark-1.svg",
+      src: "/Moses.png",
+    },
+    {
+      src: "/Wild valley honey.png",
     },
   ];
 
@@ -61,7 +64,7 @@ const Partners = ({ shadow, head1, head2, paragraph }) => {
         {" "}
         {head1}
       </h1>
-      <p className="text-center font-bold mb-20 text-sm max-w-xs md:max-w-full mx-auto">
+      <p className="text-center font-bold mb-20 text-lg max-w-xs md:max-w-full mx-auto">
         {paragraph}
       </p>
       <div
@@ -87,7 +90,7 @@ const Partners = ({ shadow, head1, head2, paragraph }) => {
                 src={slide.src}
                 width={100}
                 height={100}
-                className="max-w-[50px] md:max-w-[100px] h-full"
+                className="max-w-[70px] md:max-w-[80px] h-full object-contain"
               />
             </li>
           ))}

@@ -26,7 +26,9 @@ const Services1 = () => {
               width={300}
               height={300}
             />
-            <p className="mt-5 text-2xl font-bold text-white">Web design & Development</p>
+            <p className="mt-5 text-2xl font-bold text-white">
+              Web design & Development
+            </p>
           </div>
           {/* Second */}
           <div className="block rounded-xl bg-[#ec5396] border border-[#fff1dc]  py-8 px-5 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
@@ -36,7 +38,9 @@ const Services1 = () => {
               width={300}
               height={300}
             />
-            <p className="mt-5 text-2xl font-bold text-white">Performance marketing</p>
+            <p className="mt-5 text-2xl font-bold text-white">
+              Performance marketing
+            </p>
           </div>
           {/* Third */}
           <div className="block rounded-xl bg-[#ec5396] border border-[#fff1dc] py-8 px-5 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
