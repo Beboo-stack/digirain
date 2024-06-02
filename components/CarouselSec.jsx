@@ -14,22 +14,22 @@ import Image from "next/image";
 const CarouselSec = () => {
   const images = [
     {
-      path: "/profile.jpg",
+      path: "/Team Members/profile.jpg",
     },
     {
-      path: "/profile.jpg",
+      path: "/Team Members/profile.jpg",
     },
     {
-      path: "/profile.jpg",
+      path: "/Team Members/profile.jpg",
     },
     {
-      path: "/profile.jpg",
+      path: "/Team Members/profile.jpg",
     },
     {
-      path: "/profile.jpg",
+      path: "/Team Members/profile.jpg",
     },
     {
-      path: "/profile.jpg",
+      path: "/Team Members/profile.jpg",
     },
   ];
 
