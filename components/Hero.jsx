@@ -20,19 +20,22 @@ const Hero = () => {
 
   const images = [
     {
+      className: "  w-full h-full object-contain md:object-contain",
       title: " Dreamy Realists",
       link: "/industries",
       path: "/19 cover.jpg",
     },
     {
+      className: "  w-full h-full object-contain md:object-cover",
       title: "Dreamy Realists",
       link: "/performance-marketing",
-      path: "/responsive.png",
+      path: "/19 cover2.jpg",
     },
     {
+      className: "  w-full h-full object-contain",
       title: "Dreamy Realists",
       link: "/performance-marketing",
-      path: "/2.svg",
+      path: "/ilustration/1.svg",
     },
   ];
 
@@ -51,11 +54,11 @@ const Hero = () => {
                 <Image
                   src={item.path}
                   alt="profile"
-                  className="w-full h-full object-contain md:object-fill"
+                  className={item.className}
                   width={500}
                   height={500}
                 />
-                <div className="absolute top-44 left-0 w-full h-full ">
+                {/* <div className="absolute top-44 left-0 w-full h-full ">
                   <div className="w-full h-full flex flex-col justify-center items-center">
                     <h1 className="text-5xl font-bold text-white">
                       {item.title}
@@ -64,7 +67,7 @@ const Hero = () => {
                       Link{" "}
                     </Link>
                   </div>
-                </div>
+                </div> */}
               </CardContent>
             </div>
           </CarouselItem>

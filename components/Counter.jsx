@@ -2,7 +2,7 @@ import React from "react";
 
 const Counter = () => {
   return (
-    <div className="flex flex-col w-full h-full justify-center items-center overflow-hidden">
+    <div className="flex flex-col w-full h-full justify-center items-center overflow-hidden my-[180px]">
       <div className="flex flex-col justify-center items-center text-center">
         <h1 className="text-lg text-yellow font-bold">DOTTOPIA NUMBERS</h1>
         <h2 className="text-5xl font-bold">Shaping Your Success Story</h2>
