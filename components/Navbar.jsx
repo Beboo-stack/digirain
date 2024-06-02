@@ -32,8 +32,24 @@ const Navbar = () => {
 
   const subLinks = [
     {
-      title: "Search Engine Optimization",
-      path: "/seo-web-services",
+      title: "Branding",
+      path: "/branding",
+    },
+    {
+      title: "Printing",
+      path: "/printing",
+    },
+    {
+      title: "Social Media ",
+      path: "/social-media",
+    },
+    {
+      title: "Media Production and Motion Graphic",
+      path: "/media-production-and-motion-graphic",
+    },
+    {
+      title: "Events",
+      path: "/events",
     },
     {
       title: "Digital Communication Services",
@@ -42,6 +58,10 @@ const Navbar = () => {
     {
       title: "Performance Marketing",
       path: "/performance-marketing",
+    },
+    {
+      title: "Search Engine Optimization",
+      path: "/seo-web-services",
     },
   ];
 
@@ -58,14 +78,18 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full h-full py-7 px-6 z-[100]  md:px-10 xl:px-36 flex justify-between items-center`}
+      className={`w-full h-full py-3 px-6 z-[100]  md:px-10 xl:px-36 flex justify-between items-center`}
     >
       {/* Logo */}
       <div className="">
         <Link href="/">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl cursor-pointer text-white hover:text-[#ec5695] font-bold">
-            DIGIRAIN
-          </h2>
+          <Image
+            src="/partners/Digirain.png"
+            alt="logo"
+            width={100}
+            height={50}
+            className="cursor-pointer"
+          />
         </Link>
       </div>
       <button
@@ -111,7 +135,7 @@ const Navbar = () => {
       {/* Menu */}
       <div className="hidden w-full h-full items-center tablet:flex justify-end">
         <ul className="flex tablet:flex tablet:gap-5 lg:gap-10 items-center ">
-          <div className="relative group">  
+          <div className="relative group">
             <li className="">
               <Link
                 href="/who-we-are"
