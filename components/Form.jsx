@@ -93,7 +93,7 @@ const Form = () => {
   return (
     <div>
       <section className="">
-        <div className="mx-auto max-w-screen-xl px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
             <div className="lg:col-span-2 lg:py-12">
               <h2 className="text-4xl font-bold leading-snug text-white capitalize">
@@ -109,7 +109,7 @@ const Form = () => {
                 <h2 className="text-2xl font-bold leading-snug text-[#fbcb00] capitalize text-center">
                   Contact Us
                 </h2>
-                <div className="w-full flex flex-col justify-center items-center text-3xl">
+                <div className="w-[60%] mx-auto md:w-full flex flex-col justify-center items-center text-3xl">
                   <p>01225773231 - 01208767624</p>
                   <p>01208767624 - 01099184241</p>
                 </div>

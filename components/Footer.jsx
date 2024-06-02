@@ -82,7 +82,7 @@ const Footer = () => {
                 </Link>
               </div>
 
-              <p className=" max-w-md leading-relaxed text-[#fbcb13] text-2xl sm:max-w-md text-left md:text-center">
+              <p className=" max-w-md leading-relaxed text-[#fbcb13] text-xl md:text-2xl sm:max-w-full text-center md:text-center">
                 &quot;Where Costumers Pour Like Rain&quot;
               </p>
 
