@@ -64,6 +64,7 @@ const Form = () => {
         templateParams,
         publicKey
       );
+console.log(response.status)
 
       if (response.status === 200) {
         setFormData({
