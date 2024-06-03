@@ -18,12 +18,14 @@ const Form = () => {
 
   const schema = z.object({
     name: z.string().nonempty().min(3),
-    phone: z.string().min(11),
+    phone: z
+      .string()
+      .min(11, { message: "Phone must be at least 11 characters" }),
     message: z
       .string()
       .min(10, { message: "Message must be at least 10 characters" }),
-    // companyUrl: z.string().url().optional(),
     // companyName: z.string().min(3).optional(),
+    // companyUrl: z.string().url().optional(),
     email: z.string().email(),
   });
 
@@ -42,7 +44,7 @@ const Form = () => {
 
       const seviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
       const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
-      const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
+      const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY; 
 
       const templateParams = {
         to_name: "johnathan",
@@ -85,8 +87,6 @@ const Form = () => {
       console.error("Form validation failed:", error.errors);
       submitButton.disabled = false;
       submitButton.textContent = "Send Enquiry";
-      const message = error.errors[0].message;
-      alert(message);
     }
   };
 
@@ -214,6 +214,8 @@ const Form = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
+                    required
+                    minLength={10}
                     className="w-full rounded-lg border-gray-200 p-3 text-sm text-black bg-white"
                     placeholder="Tell us more about your project.
                     "
