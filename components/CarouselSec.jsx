@@ -37,7 +37,7 @@ const CarouselSec = () => {
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
   return (
-    <div className="w-full h-full grid justify-center items-center mb-20">
+    <div id="case-studies" className="w-full h-full grid justify-center items-center mb-20">
       <div className="">
         <h2 className="text-center uppercase text-yellow font-bold text-base">
           Case Studies

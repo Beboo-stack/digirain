@@ -1,21 +1,73 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const OurServices = () => {
   const features = [
     {
-      icon: "/ilustration/1.svg",
-      title: "Build on your terms",
+      icon: "/Characters/character 3.png",
+      path: "/branding",
+      title: "Branding",
+      Content: [
+        "A property branding agency that understands",
+        "Creative",
+        "Digital",
+        "Stay one-step ahead with your property branding",
+      ],
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
     },
     {
-      icon: "/ilustration/2.svg",
-      title: "Safe to use",
+      icon: "/Characters/character 4.png",
+      path: "/printing",
+      title: "Printing",
+      Content: [
+        "Content Creation",
+        "Content Management",
+        "Content Optimization",
+        "Content Strategy",
+        "Content Writing",
+      ],
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
     },
     {
-      icon: "/ilustration/3.svg",
-      title: "Flexible",
+      icon: "/Characters/character 8.png",
+      path: "/social-media",
+      title: "Social Media",
+      Content: [
+        "Digital Strategy",
+        "Content Creation",
+        "Community Management",
+        "Reels Creation",
+        "Influencers Management",
+      ],
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
+    },
+
+    {
+      icon: "/Characters/character 5.png",
+      path: "/events",
+      title: "Events",
+      Content: [
+        "Content Creation",
+        "Content Management",
+        "Content Optimization",
+        "Content Strategy",
+        "Content Writing",
+      ],
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
+    },
+
+    {
+      icon: "/Characters/character 6.png",
+      path: "/media-production-and-motion-graphic",
+      title: "Media Production and Motion Graphic",
+      Content: [
+        "Content Creation",
+        "Content Management",
+        "Content Optimization",
+        "Content Strategy",
+        "Content Writing",
+      ],
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
     },
   ];
@@ -45,7 +97,7 @@ const OurServices = () => {
             <h1 className="uppercase text-yellow font-bold">our services</h1>
             <h3 className=" text-5xl font-bold ">How we drive revenue</h3>
             <p className="mt-3">
-              Looking to power up your digital strategy? Dottopia offers a wide
+              Looking to power up your digital strategy? DIGIRAIN offers a wide
               range of digital marketing services that work together to attract,
               delight, and convert leads.
             </p>
@@ -58,35 +110,36 @@ const OurServices = () => {
             }}
           ></div>
         </div>
+
         <div className="relative mt-20">
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((item, idx) => (
+            {/* Third Service */}
+            {features.map((feature) => (
               <li
-                key={idx}
+                key={feature.title}
                 className="bg-[#ec5396] space-y-3 p-4 border-4 border-[#fff1dc] rounded-2xl"
               >
                 <div className="text-indigo-600 pb-3 flex justify-center items-center w-full h-[200px]">
                   <Image
+                    src={feature.icon}
                     alt=""
-                    className="w-full h-full  "
-                    src={item.icon}
+                    className="w-full h-full object-contain"
                     width={100}
                     height={100}
                   />
                 </div>
-                <h4 className="text-2xl text-gray-800 font-semibold">
-                  {item.title}
+                <h4 className="text-2xl text-white font-semibold">
+                  {feature.title}
                 </h4>
                 <div className="h-1 w-full bg-gray-200"></div>
-                <ul className="grid gap-1">
-                  {links.map((item, idx) => (
-                    <li key={idx} className="underline">
-                      {" "}
-                      {item.title}{" "}
-                    </li>
-                  ))}
+                <ul className="grid gap-1 ">
+                  <ul className="underline flex flex-col gap-1">
+                    {feature.Content.map((content) => (
+                      <li key={content}>{content}</li>
+                    ))}
+                  </ul>
                   <p className="font-bold text-lg underline mt-8 cursor-pointer text-[#fbcb13]">
-                    Explore The Service
+                    <Link href={feature.path}>Explore The Service</Link>
                   </p>
                 </ul>
               </li>

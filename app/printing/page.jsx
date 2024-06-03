@@ -29,7 +29,7 @@ const page = () => {
         {/* SVG */}
         <div className="h-full flex-1 justify-center items-center">
           <Image
-            src="/Characters/character 3.png"
+            src="/Characters/character 4.png"
             alt="profile"
             className=" w-full h-full object-cover md:object-fill lg:object-cover"
             width={500}

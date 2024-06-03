@@ -75,4 +75,7 @@
   }
 }
 
+*{
+  scroll-behavior: smooth;
+}
 

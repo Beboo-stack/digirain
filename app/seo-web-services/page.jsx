@@ -88,9 +88,9 @@ const page = () => {
       />
       <WhyUs />
       <Partners
-        head1={"Businesses Growing with Dottopia"}
+        head1={"Businesses Growing with DIGIRAIN"}
         head2={"OUR CLIENTS"}
-        paragraph={"Explore our beloved clients who trust in Dottopia."}
+        paragraph={"Explore our beloved clients who trust in DIGIRAIN."}
       />
       <CarouselSec />
       {/* <Testimonials /> */}

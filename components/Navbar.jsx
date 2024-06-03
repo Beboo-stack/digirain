@@ -44,12 +44,16 @@ const Navbar = () => {
       path: "/social-media",
     },
     {
+      title: "Events",
+      path: "/events",
+    },
+    {
       title: "Media Production and Motion Graphic",
       path: "/media-production-and-motion-graphic",
     },
     {
-      title: "Events",
-      path: "/events",
+      title: "Search Engine Optimization",
+      path: "/seo-web-services",
     },
     {
       title: "Digital Communication Services",
@@ -58,10 +62,6 @@ const Navbar = () => {
     {
       title: "Performance Marketing",
       path: "/performance-marketing",
-    },
-    {
-      title: "Search Engine Optimization",
-      path: "/seo-web-services",
     },
   ];
 
@@ -78,7 +78,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full h-full py-3 px-6 z-[100]  md:px-10 xl:px-36 flex justify-between items-center`}
+      className={`w-full h-full py- px-6 z-[100]  md:px-10 xl:px-36 flex justify-between items-center`}
     >
       {/* Logo */}
       <div className="">
@@ -144,7 +144,7 @@ const Navbar = () => {
                 Who We Are
               </Link>
               <ul
-                className={`absolute transition-all  invisible group-hover:visible flex  -left-[50%] top-[50px]  duration-700 ease-in-out flex-col submenu gap-5 z-50 bg-[#11b] shadow-lg p-5 w-[200px] rounded-lg `}
+                className={`absolute transition-all  invisible group-hover:visible flex  -left-[50%] top-[50px]  duration-700 ease-in-out flex-col justify-center items-center gap-5 z-50 bg-[#11b] shadow-lg p-5 w-[200px] rounded-lg `}
               >
                 {subLinks2.map((link) => (
                   <li

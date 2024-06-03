@@ -20,7 +20,7 @@ export default function Home() {
       />
       <Team />
       <Counter />
-      <Proplems />
+      {/* <Proplems /> */}
       <Partners2
         title={"Step Into Success With Industry Giants"}
         desc={

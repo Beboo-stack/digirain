@@ -6,43 +6,46 @@ import React from "react";
 const Partners2 = ({ className, desc, title, text }) => {
   const logos = [
     {
-      src: "/Giants/airbnb.svg",
+      src: "/partners/Dr Aseel.png",
     },
     {
-      src: "/Giants/disney.svg",
+      src: "/partners/Dr lobna.png",
     },
     {
-      src: "/Giants/apple-music-3.svg",
+      src: "/partners/Edward.png",
     },
     {
-      src: "/Giants/disney.svg",
+      src: "/partners/Godablaze.png",
     },
     {
-      src: "/Giants/airbnb.svg",
+      src: "/partners/Greecap.png",
     },
     {
-      src: "/Giants/disney.svg",
+      src: "/partners/Moses.png",
     },
     {
-      src: "/Giants/apple-music-3.svg",
+      src: "/partners/Wild valley honey.png",
     },
     {
-      src: "/Giants/disney.svg",
+      src: "/partners/Dr Aseel.png",
     },
     {
-      src: "/Giants/spark-1.svg",
+      src: "/partners/Dr lobna.png",
     },
     {
-      src: "/Giants/samsung.svg",
+      src: "/partners/Edward.png",
     },
     {
-      src: "/Giants/spark-1.svg",
+      src: "/partners/Godablaze.png",
     },
     {
-      src: "/Giants/samsung.svg",
+      src: "/partners/Greecap.png",
     },
     {
-      src: "/Giants/spark-1.svg",
+      src: "/partners/Moses.png",
+    },
+    {
+      src: "/partners/Wild valley honey.png",
     },
   ];
 
@@ -81,7 +84,7 @@ const Partners2 = ({ className, desc, title, text }) => {
                 src={slide.src}
                 width={100}
                 height={100}
-                className="max-w-[50px] md:max-w-[100px] h-full"
+                className="max-w-[70px] md:max-w-[80px] h-full object-contain"
               />
             </li>
           ))}

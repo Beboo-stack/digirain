@@ -12,7 +12,7 @@ const Booking = ({ title, className }) => {
           </h2>
           <p>
             Ready to elevate your experience? Embrace the extraordinary with
-            Dottopia. Dive in now and let’s create something remarkable
+            DIGIRAIN. Dive in now and let’s create something remarkable
             together!
           </p>
         </div>

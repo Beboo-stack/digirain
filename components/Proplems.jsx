@@ -11,7 +11,7 @@ const Proplems = () => {
 
           <p className="mt-4 ">
             Transform your Digital Challenges into Opportunities for Success and
-            Embrace the power of digital transformation with Dottopia. We
+            Embrace the power of digital transformation with DIGIRAIN. We
             specialize in identifying and resolving your digital bottlenecks.
           </p>
         </div>

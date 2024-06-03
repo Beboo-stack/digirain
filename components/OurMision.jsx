@@ -17,12 +17,12 @@ const OurMision = () => {
           synergy:
         </h2>
       </div>
-      <p className="mt-10 text-2xl text-start md:text-start w-[90%] ">
-        <span className="text-[#ec5396]">
+      <p className="mt-10 text-2xl text-center md:text-center w-[90%] ">
+        <span className="text-[#ec5396] text-start">
           {" "}
           Digirain... Where Customers Pour In Like Rain.
         </span>{" "}
-        <br />
+        <br />  
         Together, we&apos;ll create a downpour of success, where neither you nor
         your customers can thrive without the other. <br />
         At DIGIRAIN, our mission is to be the driving force behind your digital

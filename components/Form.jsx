@@ -98,12 +98,7 @@ const Form = () => {
             <div className="lg:col-span-2 lg:py-12">
               <h2 className="text-4xl font-bold leading-snug text-white capitalize">
                 <span className="text-[#037f36]">Welcome to digirain</span>{" "}
-                <br /> Where Gen Z will make storms <br /> our{" "}
-                <span className="text-[#ec5396]">
-                  {" "}
-                  professional, young, and creative
-                </span>{" "}
-                team
+                <br /> Where Gen Z will make storms
               </h2>
               <div className="mt-4 w-full flex flex-col">
                 <h2 className="text-2xl font-bold leading-snug text-[#fbcb00] capitalize text-center">
@@ -112,6 +107,15 @@ const Form = () => {
                 <div className="w-[60%] mx-auto md:w-full flex flex-col justify-center items-center text-3xl">
                   <p>01225773231 - 01208767624</p>
                   <p>01208767624 - 01099184241</p>
+                </div>
+              </div>
+              <div className="mt-4 w-full flex flex-col">
+                <h2 className="text-2xl font-bold leading-snug text-[#fbcb00] capitalize text-center">
+                  Address
+                </h2>
+                <div className="w-[90%] mx-auto md:w-full flex flex-col justify-center items-center text-3xl">
+                  45 Kambez, Nadi Al Saeed, Dokki ‏الجيزة‏، ‏محافظة الجيزة‏،
+                  ‏مصر‏ 12311
                 </div>
               </div>
             </div>

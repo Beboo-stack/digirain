@@ -20,7 +20,7 @@ const Hero = () => {
 
   const images = [
     {
-      className: "  w-full h-full object-contain md:object-contain",
+      className: "  w-full h-full object-contain md:object-cover",
       title: " Dreamy Realists",
       link: "/industries",
       path: "/19 cover.jpg",
