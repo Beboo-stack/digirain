@@ -1,12 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { z } from "zod";
 import { useRouter } from "next/navigation";
 
 const Form = () => {
   const router = useRouter();
-  const submitButton = document.querySelector('button[type="submit"]');
+  const submitButton = useRef(null);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -39,8 +39,8 @@ const Form = () => {
     try {
       const validatedData = schema.parse(formData);
 
-      submitButton.disabled = true;
-      submitButton.textContent = "Sending...";
+      submitButton.current.disabled = true;
+      submitButton.current.textContent = "Sending...";
 
       const seviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
       const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
@@ -77,15 +77,15 @@ const Form = () => {
         router.push("/successfull");
       } else {
         console.log(err);
-        submitButton.disabled = false;
-        submitButton.textContent = "Send Enquiry";
+        submitButton.current.disabled = false;
+        submitButton.current.textContent = "Send Enquiry";
       }
-      submitButton.textContent = "Send Enquiry";
-      submitButton.disabled = false;
+      submitButton.current.textContent = "Send Enquiry";
+      submitButton.current.disabled = false;
     } catch (error) {
       console.error("Form validation failed:", error.errors);
-      submitButton.disabled = false;
-      submitButton.textContent = "Send Enquiry";
+      submitButton.current.disabled = false;
+      submitButton.current.textContent = "Send Enquiry";
     }
   };
 
@@ -225,6 +225,7 @@ const Form = () => {
 
                 <div className="mt-4">
                   <button
+                    ref={submitButton}
                     type="submit"
                     className="inline-block w-full rounded-lg bg-[#037f36] px-5 py-3 font-medium text-white sm:w-auto disabled:cursor-not-allowed disabled:bg-gray-400 "
                   >
