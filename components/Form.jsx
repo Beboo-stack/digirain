@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 
 const Form = () => {
   const router = useRouter();
+  const submitButton = document.querySelector('button[type="submit"]');
 
   const [formData, setFormData] = useState({
     name: "",
@@ -38,13 +39,12 @@ const Form = () => {
     try {
       const validatedData = schema.parse(formData);
 
-      const submitButton = document.querySelector('button[type="submit"]');
       submitButton.disabled = true;
       submitButton.textContent = "Sending...";
 
       const seviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
       const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
-      const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY; 
+      const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 
       const templateParams = {
         to_name: "johnathan",
@@ -64,7 +64,6 @@ const Form = () => {
         templateParams,
         publicKey
       );
-console.log(response.status)
 
       if (response.status === 200) {
         setFormData({
@@ -84,7 +83,6 @@ console.log(response.status)
       submitButton.textContent = "Send Enquiry";
       submitButton.disabled = false;
     } catch (error) {
-      const submitButton = document.querySelector('button[type="submit"]');
       console.error("Form validation failed:", error.errors);
       submitButton.disabled = false;
       submitButton.textContent = "Send Enquiry";
