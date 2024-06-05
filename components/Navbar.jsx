@@ -84,7 +84,7 @@ const Navbar = () => {
       <div className="">
         <Link href="/">
           <Image
-            src="/partners/Digirain.png"
+            src="/partners/partner (4).png"
             alt="logo"
             width={100}
             height={50}
