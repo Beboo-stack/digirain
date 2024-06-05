@@ -48,6 +48,10 @@ const Navbar = () => {
       path: "/websites",
     },
     {
+      title: "Influencer Marketing",
+      path: "/influencer-marketing",
+    },
+    {
       title: "Media Production and Motion Graphic",
       path: "/media-production-and-motion-graphic",
     },

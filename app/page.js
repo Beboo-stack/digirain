@@ -24,7 +24,7 @@ export default function Home() {
       <Partners2
         title={"Step Into Success With Industry Giants"}
         desc={
-          "Our collaboration allows us to harness the latest innovations, insights, and cutting-edge tools to elevate your digital presence and marketing strategies."
+          "Our collaboration allows us to hardness the latest innovations, insights, and cutting-edge tools to elevate your digital presence and marketing strategies."
         }
         text={"text-5xl md:text-6xl"}
       />
