@@ -72,7 +72,7 @@ const Footer = () => {
               <div className="flex justify-center text-white ">
                 <Link href="/" className="">
                   <Image
-                    src="/partners/Digirain.png"
+                    src="/partners/partner (4).png"
                     alt="Digirain Logo"
                     width={150}
                     height={300}
