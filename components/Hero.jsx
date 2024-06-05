@@ -23,7 +23,7 @@ const Hero = () => {
 
   const images = [
     {
-      className: "w-full h-full objet-cover md:object-cover",
+      className: "w-full h-full objet-cover",
       textStyle: "",
       title: "",
       link: "/industries",
@@ -32,7 +32,7 @@ const Hero = () => {
       screenPath: "/Banners/1 SVG.svg",
     },
     {
-      className: "w-full h-full object-contain md:object-cover",
+      className: "w-full h-full object-cover",
       textStyle:
         "text-xl md:text-3xl font-bold text-[#ffce26] w-[70%] md:w-[30%] mx-auto text-center py-2 px-0 border border-white rounded-xl",
       title: "Get In Touch With Us",
@@ -42,7 +42,7 @@ const Hero = () => {
       screenPath: "/Banners/contact us SVG.svg",
     },
     {
-      className: "w-full h-full object-contain md:object-cover",
+      className: "w-full h-full object-cover",
       textStyle:
         "text-xl md:text-3xl font-bold text-[#ffce26] w-[70%] md:w-[30%] mx-auto text-center py-2 px-0 border border-white rounded-xl",
       title: "Download Our Company Profile",
