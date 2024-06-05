@@ -23,7 +23,7 @@ const Hero = () => {
 
   const images = [
     {
-      className: "w-full h-full objet-cover",
+      className: "w-full h-full object-cover",
       textStyle: "",
       title: "",
       link: "/industries",
