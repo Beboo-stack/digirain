@@ -190,7 +190,7 @@ const Navbar = () => {
               Contact Us
             </Link>
           </li>
-          <li>
+          <li className="self-end">
             <Link
               href="/company profile.pdf"
               target="_blank"

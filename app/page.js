@@ -15,7 +15,7 @@ export default function Home() {
     <div className="w-full h-full  ">
       <Hero />
       <Partners
-        shadow={"before:w-1/4 after:w-1/4"}
+        shadow={"before:w-[15%] after:w-[15%]"}
         paragraph={"JOIN OVER 500 PARTNERS WHO HAVE CHOSEN US."}
       />
       <Team />

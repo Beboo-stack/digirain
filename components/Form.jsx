@@ -36,6 +36,7 @@ const Form = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     try {
       const validatedData = schema.parse(formData);
 
