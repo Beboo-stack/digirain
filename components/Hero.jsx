@@ -23,7 +23,8 @@ const Hero = () => {
 
   const images = [
     {
-      // className: "w-full h-full object-contain md:object-cover",
+      className: "w-full h-full objet-cover md:object-cover",
+      textStyle: "",
       title: "",
       link: "/industries",
       target: "",
@@ -31,19 +32,23 @@ const Hero = () => {
       screenPath: "/Banners/1 SVG.svg",
     },
     {
-      // className: "  w-full h-full object-contain md:object-cover",
+      className: "w-full h-full object-contain md:object-cover",
+      textStyle:
+        "text-xl md:text-3xl font-bold text-[#ffce26] w-[70%] md:w-[30%] mx-auto text-center py-2 px-0 border border-white rounded-xl",
       title: "Get In Touch With Us",
       link: "/contact-us",
       target: "",
-      mobilePath: "/Banners/contact us SVG.svg",
+      mobilePath: "/Banners/contact us 2.svg",
       screenPath: "/Banners/contact us SVG.svg",
     },
     {
-      // className: "  w-full h-full object-contain",
-      title: "Download Our Company Profile", 
+      className: "w-full h-full object-contain md:object-cover",
+      textStyle:
+        "text-xl md:text-3xl font-bold text-[#ffce26] w-[70%] md:w-[30%] mx-auto text-center py-2 px-0 border border-white rounded-xl",
+      title: "Download Our Company Profile",
       link: "/company profile.pdf",
       target: "_blank",
-      mobilePath: "/Banners/portfolio SVG.svg",
+      mobilePath: "/Banners/portfolio 2.svg",
       screenPath: "/Banners/portfolio SVG.svg",
     },
   ];
@@ -63,16 +68,16 @@ const Hero = () => {
                 <Image
                   src={isMobile ? item.mobilePath : item.screenPath}
                   alt="profile"
-                  className={"w-full h-full object-cover"}
+                  className={item.className}
                   width={500}
                   height={500}
                 />
-                <div className="absolute  bottom-[-40%] left-0 w-full h-full ">
+                <div className="absolute  bottom-[-35%] left-0 w-full h-full ">
                   <div className="w-full h-full flex flex-col justify-center items-center">
                     <Link
                       href={item.link}
                       target={item.target}
-                      className="text-5xl font-bold text-white"
+                      className={item.textStyle}
                     >
                       {item.title}
                     </Link>

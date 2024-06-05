@@ -13,23 +13,32 @@ const page = () => {
       <div className="w-full flex flex-col-reverse md:flex-row  justify-center items-center h-full md:h-screen px-4 py-8 sm:px-6 sm:py-12 lg:px-32 lg:py-36 mb-20">
         {/* Text */}
         <div className=" h-full justify-center items-center lg:items-start flex-1 flex flex-col py-16">
-          <h2 className="text-2xl font-bold leading-snug text-white capitalize">
+          <h2 className="text-4xl font-bold leading-snug text-white capitalize">
             <span className="text-[#ec5396]">
-              Different Types Of Rain Different Ways To Tell Your Unique Story.
-            </span>
-            DIGIRain uses a range of diverse tools and strategies, such as
-            logos, colors, messages, stories, promotion, and distribution, to
-            create a unique name, image, and personality for your product,
-            service, or company in the minds of customers. Our goal is to
-            attract and persuade customers that your product, service, or
-            company is the best and most appropriate for their needs and
-            desires.
+              {" "}
+              Rain reach every where and your website can reach every one
+            </span>{" "}
+            <br /> Because we in digirain believe that your website is your
+            digital home DIGIRain craft your website with your brand identity
+            and personality in mind.
           </h2>
+
+          <p className="text-3xl mt-5 text-[#037f36] font-bold uppercase">
+            Includes <span className="text-white">:</span> <br />
+            <ul className="list-disc ml-10 text-yellow grid grid-cols-2 md:grid-cols-3 gap-3 text-base mt-3">
+              <li>Website Development</li>
+              <li>E-commerce</li>
+              <li>Landing Pages</li>
+              <li>SEO/SEM</li>
+              <li>Google Analytics</li>
+              <li>Google Tag Manager</li>
+            </ul>
+          </p>
         </div>
         {/* SVG */}
         <div className="h-full flex-1 justify-center items-center">
           <Image
-            src="/Characters/character 4.png"
+            src="/Characters/character 1.png"
             alt="profile"
             className=" w-full h-full object-cover md:object-fill lg:object-cover"
             width={500}

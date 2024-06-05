@@ -7,12 +7,8 @@ import Link from "next/link";
 const Footer = () => {
   const subLinks = [
     {
-      title: "Branding",
-      path: "/branding",
-    },
-    {
-      title: "Printing",
-      path: "/printing",
+      title: "Branding and Printing",
+      path: "/branding-and-printing",
     },
     {
       title: "Social Media ",
@@ -21,6 +17,10 @@ const Footer = () => {
     {
       title: "Events",
       path: "/events",
+    },
+    {
+      title: "Websites Development and SEO",
+      path: "/websites",
     },
     {
       title: "Media Production and Motion Graphic",
