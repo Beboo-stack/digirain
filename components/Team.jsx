@@ -6,7 +6,7 @@ import React from "react";
 
 const Team = () => {
   return (
-    <div className="flex  flex-col md:flex-row w-full h-full justify-center items-center px-4 max-w-[1350px] mx-auto sm:px-[45px] my-[80px]">
+    <div className="flex overflow-hidden flex-col md:flex-row w-full h-full justify-center items-center px-4 max-w-[1350px] mx-auto sm:px-[45px] my-[80px]">
       {/* Text */}
       <motion.div
       initial={{ opacity: 0, x: -100 }}

@@ -37,7 +37,7 @@ const CarouselSec = () => {
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
   return (
-    <div id="case-studies" className="w-full h-full grid justify-center items-center mb-20">
+    <div id="case-studies" className="w-full h-full grid justify-center items-center mb-20 overflow-hidden">
       <motion.div
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}

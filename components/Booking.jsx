@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Booking = ({ title, className }) => {
   return (
-    <section className={`bg-[#ff3301] text-white mb-20 ${className}`}>
+    <section className={`bg-[#ff3301] text-white mb-20 ${className} overflow-hidden`}>
       <motion.div
       initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}

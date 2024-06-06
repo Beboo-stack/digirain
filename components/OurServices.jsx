@@ -102,7 +102,7 @@ const OurServices = () => {
   ];
 
   return (
-    <section className="py-14">
+    <section className="py-14 overflow-hidden">
       <div className="max-w-screen-xl mx-auto px-4  md:px-8 ">
         <div className="relative max-w-5xl mx-auto sm:text-center ">
           <motion.div
