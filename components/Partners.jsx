@@ -153,20 +153,36 @@ const Partners = ({ shadow, head1, head2, paragraph }) => {
 
   // before:w-1/4 after:w-1/4
   return (
-    <div
+    <motion.div
+      initial={{ y: "100%", opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      exit={{ y: 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
       className="relative w-full h-full mt-20 overflow-hidden py-12 mb-[80px]  mx-auto max-w-full"
       style={{ width: "100%%" }}
     >
-      <h2 className="text-center capitalize font-bold text-base text-yellow max-w-xs md:max-w-full mx-auto">
+      <motion.h2
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="text-center capitalize font-bold text-base text-yellow max-w-xs md:max-w-full mx-auto"
+      >
         {head2}
-      </h2>
+      </motion.h2>
       <h1 className={` text-center mx-auto mb-7 font-bold text-5xl w-[70%]`}>
         {" "}
         {head1}
       </h1>
-      <p className="text-center font-bold mb-20 text-lg max-w-xs md:max-w-full mx-auto">
+      <motion.p
+        initial={{ y: "-100%" }}
+        whileInView={{ y: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
+        className="text-center font-bold mb-20 text-lg max-w-xs md:max-w-full mx-auto"
+      >
         {paragraph}
-      </p>
+      </motion.p>
       <div
         className={`absolute inset-0 z-20 before:absolute before:left-0 before:top-0  before:h-full before:bg-gradient-to-r before:from-[#111b58] before:to-transparent before:filter before:blur-3 after:absolute after:right-0 after:top-0  after:h-full after:bg-gradient-to-l after:from-[#111b58] after:to-transparent after:filter after:blur-3 ${shadow}`}
       ></div>
@@ -196,7 +212,7 @@ const Partners = ({ shadow, head1, head2, paragraph }) => {
           ))}
         </ul>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

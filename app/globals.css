@@ -75,7 +75,19 @@
   }
 }
 
-*{
+* {
   scroll-behavior: smooth;
 }
 
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  @apply w-2 h-2 rounded-full; /* Adjust width and height as needed */
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-200 dark:bg-gray-700; /* Background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-yellow dark:bg-gray-500 hover:bg-gray-600 dark:hover:bg-gray-400 rounded-full; /* Thumb color and hover effect */
+}

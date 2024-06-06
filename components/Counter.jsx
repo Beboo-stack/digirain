@@ -1,12 +1,18 @@
+"use client";
 import React from "react";
-
+import { motion } from "framer-motion";
 const Counter = () => {
   return (
     <div className="flex flex-col w-full h-full justify-center items-center overflow-hidden my-[180px]">
-      <div className="flex flex-col justify-center items-center text-center">
+      <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeInOut"}}
+      exit={{ opacity: 0, y: -100 }}
+      className="flex flex-col justify-center items-center text-center">
         <h1 className="text-lg text-yellow font-bold">DIGIRAIN NUMBERS</h1>
         <h2 className="text-5xl font-bold">Shaping Your Success Story</h2>
-      </div>
+      </motion.div>
       <p className="mt-5 text-center">
         Discover how our real-world experience translates to winning results in
         digital marketing

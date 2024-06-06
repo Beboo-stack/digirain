@@ -55,10 +55,10 @@ const Navbar = () => {
       title: "Media Production and Motion Graphic",
       path: "/media-production-and-motion-graphic",
     },
-    {
-      title: "Search Engine Optimization",
-      path: "/seo-web-services",
-    },
+    // {
+    //   title: "Search Engine Optimization",
+    //   path: "/seo-web-services",
+    // },
     {
       title: "Digital Communication Services",
       path: "/digital-communication-services",

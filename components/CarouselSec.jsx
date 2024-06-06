@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-
+import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
 import {
@@ -38,14 +38,19 @@ const CarouselSec = () => {
   );
   return (
     <div id="case-studies" className="w-full h-full grid justify-center items-center mb-20">
-      <div className="">
+      <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
+      exit={{ opacity: 0, y: -100 }}
+      className="">
         <h2 className="text-center uppercase text-yellow font-bold text-base">
           Case Studies
         </h2>
         <h2 className="text-5xl font-bold text-center my-3">
           Read Some Of Our Successful Cases
         </h2>
-      </div>
+      </motion.div>
       <p className="w-3/4 text-center mx-auto mb-16">
         Get ready to be blown away by our team’s ability to turn businesses
         around 360 degrees! We have a collection of web design, SEO, and social

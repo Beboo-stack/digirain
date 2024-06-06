@@ -1,31 +1,20 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const OurServices = () => {
   const features = [
     {
       icon: "/Characters/character 3.png",
-      path: "/branding",
-      title: "Branding",
+      path: "/branding-and-printing",
+      title: "Branding and Printing",
       Content: [
         "A property branding agency that understands",
         "Creative",
         "Digital",
         "Stay one-step ahead with your property branding",
-      ],
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
-    },
-    {
-      icon: "/Characters/character 4.png",
-      path: "/printing",
-      title: "Printing",
-      Content: [
-        "Content Creation",
-        "Content Management",
-        "Content Optimization",
-        "Content Strategy",
-        "Content Writing",
       ],
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
     },
@@ -48,19 +37,32 @@ const OurServices = () => {
       path: "/events",
       title: "Events",
       Content: [
-        "Content Creation",
-        "Content Management",
-        "Content Optimization",
-        "Content Strategy",
-        "Content Writing",
+        "Goal setting",
+        "Competitive analysis",
+        "Campaign planning",
+        "Product launches",
+        "Talks",
       ],
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
     },
-
     {
-      icon: "/Characters/character 6.png",
-      path: "/media-production-and-motion-graphic",
-      title: "Media Production and Motion Graphic",
+      icon: "/Characters/character 1.png",
+      path: "/websites",
+      title: "Websites Development and SEO",
+      Content: [
+        "Website development",
+        "E-commerce development",
+        "Landing page creation",
+        "Conversion optimization",
+        "Technical SEO",
+        "Data tracking  ",
+      ],
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
+    },
+    {
+      icon: "/Characters/character 4.png",
+      path: "/influencer-marketing",
+      title: "Influencer Marketing",
       Content: [
         "Content Creation",
         "Content Management",
@@ -70,30 +72,46 @@ const OurServices = () => {
       ],
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
     },
+    // {
+    //   icon: "/Characters/character 7.png",
+    //   path: "/seo-web-services",
+    //   title: "Search Engine Optimization",
+    //   Content: [
+    //     "Content Creation",
+    //     "Content Management",
+    //     "Content Optimization",
+    //     "Content Strategy",
+    //     "Content Writing",
+    //   ],
+    //   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
+    // },
+
+    {
+      icon: "/Characters/character 6.png",
+      path: "/media-production-and-motion-graphic",
+      title: "Media Production and Motion Graphic",
+      Content: [
+        "Visual Storytelling",
+        "Video Production",
+        "Audio Production",
+        "Asset Development",
+        "Eye-Catching Visuals",
+      ],
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius.",
+    },
   ];
 
-  const links = [
-    {
-      title: "Digital Strategy",
-    },
-    {
-      title: "Content Creation",
-    },
-    {
-      title: "Community Management",
-    },
-    {
-      title: "Reels Creation",
-    },
-    {
-      title: "Influencers Management",
-    },
-  ];
   return (
     <section className="py-14">
       <div className="max-w-screen-xl mx-auto px-4  md:px-8 ">
         <div className="relative max-w-5xl mx-auto sm:text-center ">
-          <div className="relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            exit={{ opacity: 0, y: 100 }}
+            className="relative z-10 text-center"
+          >
             <h1 className="uppercase text-yellow font-bold">our services</h1>
             <h3 className=" text-5xl font-bold ">How we drive revenue</h3>
             <p className="mt-3">
@@ -101,7 +119,7 @@ const OurServices = () => {
               range of digital marketing services that work together to attract,
               delight, and convert leads.
             </p>
-          </div>
+          </motion.div>
           <div
             className="absolute inset-0 max-w-xs mx-auto h-44 blur-[118px]"
             style={{
@@ -115,7 +133,11 @@ const OurServices = () => {
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {/* Third Service */}
             {features.map((feature) => (
-              <li
+              <motion.li
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                exit={{ opacity: 0, y: 100 }}
                 key={feature.title}
                 className="bg-[#ec5396] space-y-3 p-4 border-4 border-[#fff1dc] rounded-2xl"
               >
@@ -142,7 +164,7 @@ const OurServices = () => {
                     <Link href={feature.path}>Explore The Service</Link>
                   </p>
                 </ul>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </div>
